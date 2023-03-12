@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">Langage C | Introduction</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<!------- Corps de la page -------->
+			<main class="page-content">
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="C.html" style="color: white; font-weight: bold;">Introduction</a>
+							</li>
+							<li class="list-group-item">
+								<a href="variable.html">Variables</a>
+							</li>
+							<li class="list-group-item">
+								<a href="typevar.html">Types de variable</a>
+							</li>
+							<li class="list-group-item">
+								<a href="conditions.html">if() et if()...else</a>
+							</li>
+							<li class="list-group-item">
+								<a href="switch.html">switch()</a>
+							</li>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="boucles.html">Boucle</a>
+							</li>
+							<li class="list-group-item">
+								<a href="table.html">Tableaux</a>
+							</li>
+							<li class="list-group-item">
+								<a href="string.html">Chaînes de caractères</a>
+							</li>
+							<li class="list-group-item">
+								<a href="fonctions.html">Fonctions</a>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="structures.html">Structure</a>
+							</li>
+						</ol>
+						<div style="padding-top: 20px; padding-right: 20px;">
+							<h2>Cours Vidéo</h2>
+							<video src="Projet_vid\LANGAGE C - 4 - (Notre premier projet en Langage C).mp4" controls width="330px"></video>
+							<h3>Comment écrire un programme en C</h3>
+							<video src="Projet_vid\LANGAGE C - 5 - (Exécution de notre premier programme C).mp4" controls width="330px"></video>
+							<h3>Comment exécuter un programme</h3>
+							<video src="Projet_vid\LANGAGE C - 6 - (Les commentaires et problèmes d'accents).mp4" controls width="330px"></video>
+							<h3>Les Commentaires et Problème d'accent</h3>
+						</div>
+					</aside>
+					<article class="contenu">
+							<h2>1. Introduction</h2>
+							<h3>1-1. Définitions et terminologie</h3>
+							<p>Un programme <b>exécutable</b> est une suite d'instructions exécutée par le processeur.</p>
+							<p> 
+								Cet ensemble d'instructions est saisi dans un fichier .c à l'aide d'un éditeur de texte (ex: bloc note, sublime...), ce type de fichier s'appellle <b>fichier source</b>. Les instructions qui y sont écrites s'appellent du <b>code</b> ou encore <b>le code source</b>.<br>
+								Un compilateur est un logiciel qui lit le code source et le converti en un <b>code exécutable</b>, c'est-à-dire un ensemble d'instructions compréhensible par le processeur. La compilation d'une source se fait en deux étapes: la compilation proprement dite et le <b>linkage</b>. On utilise en général le terme compilation en englobant les deux types étapes précédemment citées.
+								<ul>
+									<li>La compilation propremment dite produit un un fichier objet dont l'extension est .obj;</li>
+									<li>Les sources peuvent être réparties dans plusieurs fichiers, ceux-ci doivent être compilés séparément.</li>
+								</ul>
+								Certains environnement de développement servent d'éditeurs, et prennent en charge la compilation et linkage (ex: dev-C++).
+							</p>
+							<h3>1-2. Structure d'un programme C</h3>
+							<h4>Importation de la bibliothèque</h4>
+							<p>
+								<center>
+									<p style="background-color: lightgray;" contenteditable="true">
+										<span style="color: green">#include < stdio.h ></span> <br>
+									</p>
+								</center>
+								Selon ce que l'on souhaite faire dans notre programme, on peut avoir besoin de différentes fonctions.<br>
+								Celles-ci sont disponibles des bibliothèques. Par exemple:
+								<ul>
+									<li><b>stdio.h</b> propore des fonctions de saisie et d'affichage</li>
+									<li><b>conio.h</b> propose aussi des fonctions d'entrées/sorties</li>
+									<li><b>math.h</b> propose des fonctions mathématiques</li>
+								</ul>
+							</p>
+							<h4>Corps du programme</h4>
+							<p style="background-color: lightgray; width: 80%;" contenteditable="true">
+								<span style="color: green">#include < stdio.h ></span> <br>
+								main<font color="red">()</font><br>
+								{<br>
+								&emsp; intruction1;<br>
+								&emsp; intruction2;<br>
+								&emsp; intruction3;<br><br>
+								&emsp; ------------;<br><br>
+								&emsp;intruction-n;<br>
+								}
+							</p>
+							<h4>Exemple de programme C</h4>
+							<p style="background-color: lightgray; width: 80%" contenteditable="true">
+								<span style="color: green">#include < stdio.h ></span> <br>
+								main<font color="red">()</font><br>
+								{<br>
+								&emsp; printf <font color="red">(<font color="blue">"Hello world !"</font>);</font><br>
+								}
+							</p>
+							<h4>Résultat</h4>
+							<p style="padding-top: 20px;">
+								<img width="350px" src="Project_img\code1.png"/>
+							</p>
+							<p>
+								Remarquez que chaque ligne se termine par un point-virgule ";". Pour afficher une variable de type alpha-numérique en C, on utilise <b>printf("Texte à afficher");</b>.
+							</p>
+							<h3>1-3. Commentaires</h3>
+							<p>
+								Un commentaire est une séquence de caractères ignorée par le compilateur, on s'en sert pour expliquer des portions de code. On les délimite par:
+								<ul>
+									<li>/* commentaire */: si le commentaire s'étend sur plusieurs lignes;</li>
+									<li>// commentaire : si le commentaire ne s'étend que sur une seule ligne.</li>
+								</ul>
+								<h4>Exemple de code avec commentaire</h4>
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <font color="lightblue">
+										/* Ceci est un commentaire, il sera ignoré par le compilateur */
+									</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Hello world !"</font>);</font><br>
+									}
+								</p>
+							</p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div> 
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">Langage C | Chaines de caractères</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<ul id="menu-deroulant">
+					<span class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<li>
+						<a href="Index.html">
+						<i class="fas fa-home"></i> Accueil
+					</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------------------------------------------------ Fin de l'entête --------------------------------------------------------->
+			<!------------------------------------------------ Corps de la page -------------------------------------------------------->
+			<main class="page-content">
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="C.html">Introduction</a>
+							</li>
+							<li class="list-group-item">
+								<a href="variable.html">Variables</a>
+							</li>
+							<li class="list-group-item">
+								<a href="typevar.html">Types de variable</a>
+							</li>
+							<li class="list-group-item">
+								<a href="conditions.html">if() et if()...else</a>
+							</li>
+							<li class="list-group-item">
+								<a href="switch.html">switch()</a>
+							</li>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="boucles.html">Boucle</a>
+							</li>
+							<li class="list-group-item">
+								<a href="table.html">Tableaux</a>
+							</li>
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="string.html" style="color: white; font-weight: bold;">Chaînes de caractères</a>
+							</li>
+							<li class="list-group-item">
+								<a href="fonctions.html">Fonctions</a>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="structures.html">Structure</a>
+							</li>
+						</ol>
+					</aside>
+					<article class="contenu">
+						<h2>7.Chaînes de caractères</h2>
+						<h3>7-1. Définition</h3>
+						<p>
+							Une chaîne de caractères est un <b>tableau</b> de <b>char</b> contenant un <b>caractère nul</b>. Le caractère nul a 0 pour code ASCII et s'écrit: \'0'. Les variables significatives de la chaîne de caractères sont toutes celles placées avant le caractère nul. On remarque donc que si le caractère nul est en première position, on a une chaîne de caractères vide.
+							Par exemple, la phrase "Pascal" sera codée de la sorte:
+							<center>
+								<table border="1px">
+									<tr>
+										<td>'P'</td>
+										<td>'a'</td>
+										<td>'s'</td>
+										<td>'c'</td>
+										<td>'a'</td>
+										<td>'l'</td>
+										<td>\'0'</td>
+										<td>...</td>
+									</tr>
+								</table>
+							</center>
+						</p>
+						<h3>7-2. Déclaration</h3>
+						<p>
+							Comme une chaîne de caractères est un tableau de <b>char</b>, on le déclare comme suit:
+							<center>
+								<p style="background-color: lightgray;" contenteditable="true">
+									<b>char</b> nom_chaine<font color="red">[<font color="violet">taille_chaine</font>];</font><br>
+								</p>
+							</center>
+						</p>
+						<center>
+							<h4>Exemple de déclaration d'une chaîne de caractères</h4>
+							<center>
+								<p style="background-color: lightgray;" contenteditable="true">
+									<b>char</b> c<font color="red">[<font color="violet">20</font>];</font><br>
+								</p>
+							</center>
+						</center>
+						<h4>Attention!</h4>
+						<p>Le nombre maximal de lettres qu'il sera possible de placer dans la chaîne ne sera pas certainement 20 mais 19, car il faut placer après le dernier caractère de la chaîne un caractère nul!</p>
+						<h3>7-3. Initialisation</h3>
+						<p>
+							On initialise une chaîne à la déclaration, et <b>seulement</b> à la déclaration, et cela se fait de la sorte:
+							<center>
+								<p style="background-color: lightgray;" contenteditable="true">
+									<b>char</b> nom_chaine<font color="red">[<font color="violet">taille_chaine</font>]=<font color="violet">"valeur"</font>;</font><br>
+								</p>
+							</center>
+							<center>
+								<h4>Exemple d'initialisation d'une chaîne</h4>
+								<p style="background-color: lightgray;" contenteditable="true">
+									<b>char</b> c<font color="red">[<font color="violet">10</font>]=<font color="violet">"Gaston"</font>;</font><br>
+								</p>
+							</center>
+							<p>
+								Cette instruction déclare une chaîne de caractère à "Gaston". Les 7 premiers des 10 éléments du tableau seront occupés par les 6 caractères de la chaîne ainsi que par le caractère nul, les autres contiendront des valeurs non significatives. <br>
+							</p>
+							<p>
+								Observez bien l'exemple suivant:
+								<center>
+									<p style="background-color: lightgray;" contenteditable="true">
+										<b>char</b> c<font color="red">[<font color="violet">5</font>]=<font color="violet">"Tolno"</font>;</font><br>
+									</p>
+								</center>
+								Cette déclaration engendrera un <b>warning</b> (avertissement) à la compilation et probablement une erreur à l'exécution car l'affectation du caractère nul à la 6<sup>ème</sup> position du tableau donnera lieu à un débordement d'indice.
+							</p>
+						</p>
+						<h3>7-4. Affichage</h3>
+						<p>
+							Il existe deux méthodes pour afficher une chaîne de caractères.
+						</p>
+						<h4>Première méthode:</h4>
+						<p>
+							Tout comme pour les tableaux, nous pouvons utilser une boucle pour afficher une chaîne de caractères. (Voir figure)
+							<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+								<span style="color: green">#include < stdio.h ></span> <br>
+								main<font color="red">()</font><br>
+								{<br>
+									&emsp; <b>int</b> i <font color="red">= <font color="violet">0</font>;</font><br>
+									&emsp; <b>char</b> c<font color="red">[<font color="violet">10</font>]=<font color="violet">"Pascal"</font>;</font><br>
+									&emsp; printf<font color="red">(<font color="blue">"Vous avez saisi: "</font>);</font><br>
+									&emsp; <b>while</b><font color="red">(<font color="black">c</font>[<font color="black">i</font>]!=<font color="black">'\0'</font>)</font><br>
+									&emsp; {<br>
+									&emsp;&emsp; printf<font color="red">(<font color="blue">"%c"</font>,<font color="black">c</font>[<font color="black">i</font>]);</font><br>
+									&emsp;&emsp; i<font color="red">++ ;</font><br>
+									&emsp; }<br>
+								}
+							</p> 
+							<h4>Résultat</h4>
+							<p>
+								<img src="Project_img\code7.png">
+							</p>
+						</p>
+						<h4>Deuxième méthode:</h4>
+						<p>
+							Cette seconde méthode est très simple. Il suffit d'utiliser <b>printf</b> avec la chaîne de format <b>%s</b>.
+							<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+								<span style="color: green">#include < stdio.h ></span> <br>
+								main<font color="red">()</font><br>
+								{<br>
+									&emsp; <b>char</b> c<font color="red">[<font color="violet">10</font>]=<font color="violet">"Pascal"</font>;</font><br>
+									&emsp; printf<font color="red">(<font color="blue">"Vous avez saisi: %s"</font>, <font color="black">c</font>);</font><br>
+								}
+							</p>
+							<h4>Résultat</h4>
+							<p>
+								<img src="Project_img\code7.png">
+							</p> 
+						</p>
+						<p>
+							Par contre soyez attentif au fait que si votre chaîne ne contient pas de caractère nul ou que le caractère nul se trouve en déhors de la plage d'indice de votre chaîne, il faudra vous attendre aux pires horreurs à l'exécution!
+						</p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

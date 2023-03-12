@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">Langage C | Variables</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main class="page-content">
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="C.html">Introduction</a>
+							</li>
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="variable.html" style="color: white; font-weight: bold;">Variables</a>
+							</li>
+							<li class="list-group-item">
+								<a href="typevar.html">Types de variable</a>
+							</li>
+							<li class="list-group-item">
+								<a href="conditions.html">if() et if()...else</a>
+							</li>
+							<li class="list-group-item">
+								<a href="switch.html">switch()</a>
+							</li>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="boucles.html">Boucle</a>
+							</li>
+							<li class="list-group-item">
+								<a href="table.html">Tableaux</a>
+							</li>
+							<li class="list-group-item">
+								<a href="string.html">Chaînes de caractères</a>
+							</li>
+							<li class="list-group-item">
+								<a href="fonctions.html">Fonctions</a>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="structures.html">Structure</a>
+							</li>
+						</ol>
+						<div style="padding-top: 20px; padding-right: 20px;">
+							<h2>Cours Vidéo</h2>
+							<video src="Projet_vid\LANGAGE C - 7 - Introduction aux variables.mp4" 
+							controls width="330px"></video>
+						</div>
+					</aside>
+					<article class="contenu">
+							<h2>2. Variables</h2>
+							<p>
+								Une variable est un emplacement de la mémoire dans lequel est stockée une valeur. Chaque variable porte un nom et c'est ce nom qui sert à identifié l'emplacement de la mémoire représenté par cette variable. <br>
+								Pour utiliser une variable, la prémière étape est la déclaration.
+							</p>
+							<h3>2-1. Déclaration</h3>
+							<p>
+								Déclarer une variable, c'est prévenir le compilateur qu'un nom va être utilisé pour désigner un emplacement de la mémoire. En C, on déclare les variables après l'accolade suivant <b>main()</b> (pour le moment).<br>
+								On place les instructions à la suite de la déclaration de variables.
+								Pour déclarer une variable, on procède comme suit:
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>type</b> var <font color="red">;</font><br>
+									&emsp; <font color="lightblue">
+										/* type peut être int, float ou double ... */
+									</font><br>
+									}
+								</p>
+							</p>
+							<h3>2-2. Affectation</h3>
+							<p>
+								Si l'on souhaite affecter à une variable une valeur, on utilise l'opérateur <b>=</b>.
+								<h4>Exemple d'affectation</h4>
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> a <font color="red">;</font>&nbsp;
+									<font color="lightblue">
+										/* Déclaration de la variable a de type int */
+									</font><br>
+									&emsp; a<font color="red">=</font>5<font color="red">;</font>&nbsp;
+									<font color="lightblue">
+										/* Affectation à la variable a, la valeur 5 */</font><br>
+									}
+								</p>
+							</p>
+							<h3>2-3. Saisie</h3>
+							<p>
+								Traduisons en C l'instruction <b>lire(var)</b> que nous avons vu en algorithmique. Pour récupérer la saisie d'un utilisateur et la placer dans une variable, on utilise l'instructions suivante: <b>scanf("%d", &var);</b><br>
+								<b>scanf</b> suspend l'exécution du programme jusqu'à ce que l'utilisateur ait saisi une valeur et pressé la toute entrée. La valeur saisie est alors affecté à la variable.
+								<h4>Exemple</h4>
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> a <font color="red">;</font><br>
+									&emsp; scanf<font color="red">(<font color="blue">"%d"</font>, &<font color="black">var</font>);</font><br>
+									}
+								</p>
+							</p>
+							<h3>2-4. Affichage</h3>
+							<p>
+								Traduisons maintenant l'instruction <b>Ecrire(var)</b> en C. Cette instruction permet d'afficher la valeur d'une variable. <b>printf("%d", var);</b><br>
+								Cette instruction affiche la valeur contenue dans la variable var. 
+							</p>
+							<h4>Exemple</h4>
+							<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> a <font color="red">,</font> b<font color="red">,</font> c<font color="red">;</font><br>
+									&emsp; a<font color="red">=</font>1<font color="red">;</font><br>
+									&emsp; b<font color="red">=</font>2<font color="red">;</font><br>
+									&emsp; c<font color="red">=</font>3<font color="red">;</font><br>
+									&emsp; printf<font color="red">(<font color="blue">"La valeur de a est %d, celle de b est %d, et celle de c est %d"</font>,</font> a<font color="red">,</font> b<font color="red">,</font> c<font color="red">);</font><br>
+									}
+								</p>
+							<h4>Résultat</h4>
+							<p style="padding-top: 20px;">
+								<img width="400px" src="Project_img\code2.png" alt="Résultat du code précédent" />
+							</p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

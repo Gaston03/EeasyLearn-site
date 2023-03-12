@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C++-EasyLearn">C++ | Classe</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main>
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="Cpp.html">Généralités</a>
+							</li>
+							<li class="list-group-item">
+								<a href="Divergence.html">Incompatibilités entre C et C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="input-output.html">Entrées/Sorties Conventionnelles du C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="specificite.html">Spécificités du C++</a>
+							</li>
+							<li class="list-group-item"  style="background-color: darkblue;">
+								<a href="classe.html" style="color: white; font-weight: bold;">Classes et Objets</a>
+							</li>
+						</ol>
+					</aside>
+					<article class="contenu">
+						<h2>5. CLASSES ET OBJETS</h2>
+						<p>La classe est une généralisation de la notion de type utilisateur, dans lequel données (membres données) et méthodes (fonctions membres) sont associées. En POO pure, les données sont encapsulées et ne peuvent être accédées que par les méthodes. Le C++ autorise à n’encapsuler qu’une partie des données d’une classe. Il existe même un type particulier, qui est la généralisation de la structure du C, dans lequel données et mé-thodes sont effectivement associées, mais sans aucune encapsulation. Sur le plan conceptuel, il correspond à un cas particulier de la classe : une classe dans laquelle aucune donnée n’est encapsulée. Comme une classe n’est qu’un type utilisateur, les objets possèdent les mêmes caractéristiques que les variables ordinaires, en particulier en ce qui concerne leurs différentes classes d’allocation (statique, automatique, dynamique).</p>
+						<h3>5-1. Structures en C++</h3>
+						<p>En C, une déclaration telle que :<br>
+                            struct point<br>
+                            {<br>
+                            	int x ;<br>
+                            	int y ;<br>
+                            } ;
+                            <p>définit un type structure nommé point, x et y étant des champs ou membres de la structure point. On peut déclarer des variables que l’on utilisera ensuite comme en C:<br>
+                               struct point a, b ; // réserve l’emplacement pour deux structures nommées a et b, de type point <br>
+                            En C++, on peut associer des méthodes aux données d’une structure. Cependant, une telle association est relativement artificielle et son principal intérêt est de préparer à la notion de classe.</p>
+						</p>
+						<h3>Déclaration d’une structure comportant des fonctions membres</h3>
+						<p>Supposons que nous souhaitons associer à la structure point précédente trois fonctions :<br>
+							 . initialise pour attribuer des valeurs aux coordonnées d’un point ;<br>
+							 . deplace pour modifier les coordonnées d’un point ;<br>
+							 . affiche pour afficher un point : ici, nous nous contenterons d’afficher les coordonnées du point.<br>
+                            Voici comment l’on pourrait déclarer la structure point :
+                         <h4>Déclaration du type point</h4>
+                                 struct point <br>
+                                 {          /* déclaration “classique” des données */<br>
+                                     int x ;<br>
+                                     int y ;<br>
+                                        /* déclaration des fonctions membres (méthodes) */<br>
+                                     void initialise (int, int) ;<br>
+                                     void deplace (int, int) ;<br>   
+                                     void affiche () ;
+                                 } ;<br>
+                                 Outre la déclaration classique des données, apparaissent les déclarations des fonctions membres. La défini-tion de ces fonctions sera réalisée un peu plus loin. Il est prévu que la méthode initialise, par exemple, rece-vra deux arguments de type int sans préciser leur rôle. Il ne faut pourtant pas oublier que l’en-tête de initia-lise vise à affecter aux membres x et y les valeurs reçues en arguments.</p> 
+                        <h3>Définition des fonctions membres</h3>
+                        <p>C’est pratiquement la définition classique de fonctions. Ainsi, la définition de initialise serait:<br>
+                        	   void point::initialise (int abs, int ord)<br>
+                        	   {<br>
+                        	   	 x = abs ;<br>
+                        	   	 y = ord ;<br>
+                        	   	}<br>
+                            Le symbole :: correspond à l’opérateur de résolution de portée, servant à modifier la portée d’un identifi-cateur. Ici, il signifie que l’identificateur initialise concerné est celui défini dans point.<br>
+                                 /* ------------Définition des fonctions membres du type point -------------------- */ <br>
+                                 void point::initialise (int abs, int ord)<br>
+                                 {<br>
+                                     x = abs; y = ord;<br>
+                                 }<br>  
+                                 void point::deplace (int dx, int dy)<br>
+                                 {<br>
+                                    x += dx; y += dy;<br> 
+                                 }<br>
+                                 void point::affiche ()<br>
+                                 {<br>
+                                    cout <<“Je suis en ” << x <<“ ” << y << “\n” ;<br>
+                                 }    
+                             </p>        
+	                    <h3>Utilisation d’une structure comportant des fonctions membres</h3>
+                        <p>Disposant du type point, on peut déclarer autant de structures de ce type que l’on veut. Par exemple,<br>
+                        	point a, b ;<br>
+                           déclare deux structures a et b possédant, chacune, des membres x et y et disposant des trois méthodes initia-lise, deplace et affiche. Remarquons que si chaque structure dispose de ses propres membres données, il n’en va pas de même des fonctions membres, générées qu’une seule fois. L’accès aux membres x et y des struc-tures a et b pourrait se dérouler comme en C, et l’on pourrait écrire :<br>  
+                            a.x = 5 ;<br>
+                           accédant ainsi directement aux données en violant le principe d’encapsulation, ce qui serait bien accepté à ce niveau de structure de C++. On procéderait de la même manière pour appeler une fonction membre:<br>
+                            a.initialise (5,2) ; // appel la fonction membre initialise de la structure a, en lui transmettant 5 et 2 en arguments.</p>
+                            <h3>5-2. Notion de classe</h3>
+                            <p>
+                            	Une classe est une structure où seulement certains membres et/ou fonctions sont publics, les autres étant dits privés. La déclaration d’une classe est voisine de celle d’une structure. En effet, il suffit :
+								<ul>
+									<li>de remplacer le mot clé struct par le mot clé class ;</li>
+									<li>de préciser les membres publics et les membres privés en utilisant les mots clé public et private.</li>
+								</ul>
+							</p>
+							<p>
+								En faisant de la structure point une classe dans laquelle les membres données sont privés et les fonctions membres publiques, sa déclaration serait la suivante :
+								<h4>Déclaration de la classe point</h4>
+								<p>
+									<b>
+										class point <br>
+										{ /* déclaration des membres privés */ <br>
+										private : /* facultatif */ <br>
+										int x ; <br>
+										int y ; <br>
+										/* déclaration des membres publics */ <br>
+										public : <br>
+										void initialise (int, int) ; <br>
+										void deplace (int, int) ; <br>
+										void affiche () ; <br>
+										} ;
+									</b>
+								</p>
+								<p>
+									La définition des fonctions membres d’une classe se fait comme celles d’une structure. Ces fonctions ont accès à l’ensemble des membres de la classe et l’utilisation d’une classe est identique à celle d’une structure.
+								</p>
+                            </p>
+                            <h3>5-3. Affectation d'obejts</h3>
+                            <p>
+                            	En C, on peut affecter à une structure la valeur d’une autre structure de même type. Voir cet exemple : <br>
+								<b>
+									struct point <br>
+									{ <br>
+										int x ; <br>
+										int y ; <br>
+									} ; <br>
+									struct point a, b ; <br>
+									…. <br>
+									a = b ; // ou encore : a.x = b.x ; a.y = b.y ; <br>
+								</b>
+								En C++, cette possibilité d’affectation globale s’étend aux objets de même type. Elle correspond à une reco-pie des valeurs des membres données, que ceux-ci soient publics ou non. Voir cet exemple:
+								<b> 
+									class point <br>
+									{ <br>
+									int x ; <br>
+									public : <br>
+									int y ; <br>
+									….. <br>
+									} ; <br>
+									point a, b ; <br>
+									…. <br>
+									b = a ; // mais ici, il n’est plus possible d’écrire : b.x = a.x ; b.y = a.y ; <br>
+								</b>
+								<p>
+									En effet, si la deuxième affectation est légale (y étant ici public), la première ne l’est pas, car x est privé. L’affectation b = a est toujours légale, quelque soit le statut des membres donnés. On peut considérer qu’elle ne viole pas le principe d’encapsulation, les données privées de b restant toujours inaccessibles directement.
+								</p>
+                            </p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

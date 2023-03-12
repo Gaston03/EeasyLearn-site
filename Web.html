@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="HTML & CSS-EasyLearn">Introduction au HTML</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main>
+				<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="web.html" style="color: white; font-weight: bold;">Introduction</a>
+							</li>
+							<li class="list-group-item">
+								<a href="balise.html">Notions de balise</a>
+							</li>
+						</ol>
+					</aside>
+				<section class="contenu">
+					<h2>1. Introduction</h2>
+					<div>
+						<b>HTML</b> et <b>CSS</b> sont deux langage qu'il faut pour créer un site web. C'est le navigateur qui fera la traduction entre ces langages informatiques et ce que vous avez afficher à l'écran. <br>
+						Pour créer un site web, on doit donner des instructions à l'ordinateur. Il ne suffit pas simplement de taper le texte qui devra figurer dans le site (comme on le ferait dans un traitement de texte word, par exemple), il faut aussi indiquer où placer ce texte, insérer des images, faire des liens entre les pages. etc.
+					</div>
+					<h2>1-2. Rôle de HTML et CSS</h2>
+					<div>
+						Pour expliquer à l'ordinateur ce que vous voulez faire, il va falloir utiliser un langage qu'il comprend. Et c'est là que les choses se corsent, parce qu'il <i>va falloir apprendre deux langages!</i><br>
+						Voici donc le rôle de chacun de ces deux langages:<br>
+						<ul>
+							<li>
+								<b>HTML</b> (HyperText Markup Language): il a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et organiser le contenu. C'est donc en HTML que  vous écrirez ce qui doit être affiché sur la page: du texte, des liens, des images... Vous direz par exemple: << Ceci est mon titre, ceci est mon menu, voici le texte principal de la page, voici une image à afficher, ect. >>
+							</li>
+							<li>
+								<b>CSS</b> (Cascading Style Sheets, aussi appelées Feuilles de style): le rôle du CSS est de gérer l'apparence de la page web (agencement, positionnement, décoration, couleurs, taille du texte...). Ce langage est venu compléter le HTML en 1996.
+							</li>
+						</ul>
+						<p>
+							Vous pouvez très bien créer un site web uniquement en HTML, mais celui-ci ne sera pas très beau: l'information apparaîtra << brute >>. C'est pour cela que le langage CSS vient toujours le compléter.
+						</p>
+					</div>
+					<h2>1-3. Les différentes versions de HTML et CSS</h2>
+					<div>
+						<p>
+							Au fil du temps, les langages HTML et CSS ont beaucoup évolué. Danc la toute première version du HTML (HTML 1.0) il n'était même pas possible d'afficher des images!<br>
+							Voici un très bref historique de ces langages pour votre culture générale.
+						</p>
+						<p>
+							<h3>Les versions de HTML</h3>
+							<b>HTML 1</b>: c'est la toute première version créée par Tim Berners-Lee en 1991. <br>
+							<b>HTML 2</b>: la deuxième version du HTML apparait en 1994 et prend fin en 1996 avec l'apparition du HTML 3.0. C'est cette version qui posera en fait les bases des versions suivantes du HTML. Les règles et le fonctionnement de cette version sont donnés par W3C (tandis que la première version a été créée par un seul homme). <br>
+							<b>HTML 3</b>: apparue en 1996, cette nouvelle version du HTML rajoute de nombreuses possibilités au langage comme les tableaux, les applets, les scripts, le positionnement du texte autour des images, etc. <br>
+							<b>HTML 4</b>: il s'agit de la version la plus répandue du HTML (plus précisement, il s'agit de HTML 4.01). Elle apparaît pour la première fois en 1998 et propose l'utilisation de frames (qui découpent une pages web en plusieurs parties), des tableaux plus complexes, des améliorations sur les formulaires, etc. Mais surtout, cette version permet pour la première fois d'exploiter des feuilles de style, notre fameux CSS ! <br>
+							<b>HTML 5</b>: c'est la dernière version. Encore assez peu répandue, elle fait beaucoup parler d'elle car elle apporte de nombreuses améliorations comme la possibilité d'inclure facilement des vidéos, un meilleur agencement du contenu, de nouvelles fonctionnalités pour les formulaires, etc. C'est cette version que nous allons découvrir ensemble. <br>
+						</p>
+						<p>
+							<h3>Les versions du CSS</h3>
+							<b>CSS 1</b>: dès 1996, on dispose de la première version du CSS. Elle pose les bases de ce langage qui permet de présenter sa page web, comme les couleurs, les marges, les polices de caractères, etc. <br>
+							<b>CSS 2</b>: apparue en 1999 puis compléter par CSS 2.1, cette nouvelle version de CSS rajoute de nombreuses options. On peut désormais utiliser des techniques de positionnement très précises, qui nous permettent d'afficher des éléments où on le souhaite sur la page. <br>
+							<b>CSS 3</b>: c'est la dernière version, qui apporte des fonctionnalités particulièrement attendues comme les bordures arrondies, les dégradés, les ombres, etc. <br>
+						</p>
+					</div>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

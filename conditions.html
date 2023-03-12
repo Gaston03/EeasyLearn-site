@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">Traitement conditionnel | if()</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			<!------- Fin de l'entête --------->
+			<main>
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="C.html">Introduction</a>
+							</li>
+							<li class="list-group-item">
+								<a href="variable.html">Variables</a>
+							</li>
+							<li class="list-group-item">
+								<a href="typevar.html">Types de variable</a>
+							</li>
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="conditions.html" style="color: white; font-weight: bold;">if() et if()...else</a>
+							</li>
+							<li class="list-group-item">
+								<a href="switch.html">switch()</a>
+							</li>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="boucles.html">Boucle</a>
+							</li>
+							<li class="list-group-item">
+								<a href="table.html">Tableaux</a>
+							</li>
+							<li class="list-group-item">
+								<a href="string.html">Chaînes de caractères</a>
+							</li>
+							<li class="list-group-item">
+								<a href="fonctions.html">Fonctions</a>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="structures.html">Structure</a>
+							</li>
+						</ol>
+						<div style="padding-top: 20px; padding-right: 20px;">
+							<h2>Cours Vidéo</h2>
+							<video src="Projet_vid\LANGAGE C - 16 - La structure conditionnelle if - else if - else.mp4" 
+							controls width="330px"></video>
+						</div>
+					</aside>
+					<article class="contenu">
+							<h2>4. Traitement conditionnel</h2>
+							<p>
+								<p>
+									On appelle traitement conditionnel, une portion de code qui n'est pas exécutée systématiquement, c'est-à-dire des instructions dont l'exécution est conditionnée par le succès d'un test.
+								</p>
+								<h3>4-1. if()</h3>
+								<h4>Principe</h4>
+								<p>
+									En algorithmique un traitement conditionnel se rédige de la sorte:
+								</p>
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									si<font color="red">(<font color="black">condition</font>)</font> alors<br><br>
+									&emsp; instruction<br><br>
+									FinSi
+								</p>
+								<p>
+									Si la condition est vérifiée, alors les instructions sont exécutés, sinon, elles ne sont pas exécutées. L'exécution de l'algorithme se poursuit en ignorant les instructions se trouvant entre le "alors" et le "Finsi". Un traitement conditionnel se code de la sorte, en C:
+								</p>
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									if<font color="red">(<font color="black">condition</font>)</font><br>
+									{<br>
+									&emsp; instruction<font color="red">;</font><br>
+									}
+								</p>
+								<p>
+									Notez bien qu'il n'y a pas de point-virgule après la parenthèse du if. 
+								</p>
+								<h4>Comparaisons</h4>
+								<p>
+									La formulation d'une condition se fait souvent à l'aide des opérateurs de comparaison. Les opérateurs de comparaison disponibles sont:
+									<ul>
+										<li> == : égalité;</li>
+										<li> != : non-égalité (différent);</li>
+										<li> <, <=, :inférieur à, inférieur ou égal à;</li>
+										<li> >, >= : supérieur à, supérieur ou égal à;</li>
+									</ul>
+								</p>
+								<p>
+									Par exemple, la condition a==b est vérifiée si et seulement si a et b ont la même valeur au moment où le test est évalué.
+								</p>
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> n <font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer un nombre: "</font>);</font><br>
+									&emsp; scanf<font color="red">(<font color="blue">"%d"</font>, &<font color="black">n</font>);</font><br>
+									&emsp; if<font color="red">(<font color="black">i</font>==<font color="violet">0</font>)</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"Vous avez saisi une valeur nulle !"</font>);</font><br>
+									}
+								</p>
+								<h3>4-2. if()....else</h3>
+								<p>
+									Il existe une forme étendue de traitement conditionnel, on la note en algorithmique de la façon suivante:
+								</p>
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									si<font color="red">(<font color="black">condition</font>)</font> alors<br>
+									&emsp; instruction<br>
+									sinon <br>
+									&emsp; instruction<br>
+									FinSi
+								</p>
+								<p>
+									Les instructions délimitées par "alors" et "sinon" sont exécutées si le test est vérifié, et les instructions délimitées par sinon et Finsi sont exécutées si le test n'est pas vérifié. On traduit cela, en C, comme suit:
+								</p>
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									if<font color="red">(<font color="black">condition</font>)</font><br>
+									{<br>
+									&emsp; instruction<font color="red">;</font><br>
+									}<br>
+									else<br>
+									{<br>
+									&emsp; instruction<font color="red">;</font><br>
+									}
+								</p>
+								<h3>Connecteurs logiques</h3>
+								<p>
+									On formule des conditions davantage élaborées en utilisant des connecteurs logiques "et" et "ou". La condition A et B est vérifiée si les deux conditions A et B sont vérifiées simultanément. La condition A ou B est vérifiée si au moins une de ces deux conditions A et B est vérifiée. Le "et" s'écrit <b>&&</b> et le "ou" s'écrit <b>||</b> en C.
+								</p>
+								<h4>Voici un programme C qui nous donne le signe de a*b sans les multiplier.</h4>
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> a <font color="red">,</font> b<font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer a: "</font>);</font><br>
+									&emsp; scanf<font color="red">(<font color="blue">"%d"</font>, &<font color="black">a</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer b: "</font>);</font><br>
+									&emsp; scanf<font color="red">(<font color="blue">"%d"</font>, &<font color="black">b</font>);</font><br>
+									&emsp; <b>if</b><font color="red">((<font color="black">a</font><<font color="violet">0</font> && <font color="black">b</font><<font color="violet">0</font>) || (<font color="black">a</font>><font color="violet">0</font> && <font color="black">b</font>><font color="violet">0</font>))</font><br>
+									&emsp;&emsp; printf<font color="red">(<font color="blue">"Le produit de %d et %d est positif"</font>,</font> a<font color="red">,</font> b<font color="red">);</font><br>
+									&emsp; <b>else if</b><font color="red">(<font color="black">a</font>==<font color="violet">0</font> || <font color="black">b</font>==<font color="violet">0</font>)</font><br>
+									&emsp;&emsp; printf<font color="red">(<font color="blue">"Le produit de %d et %d est nul"</font>,</font> a<font color="red">,</font> b<font color="red">);</font><br>
+									&emsp; <b>else</b><br>
+									&emsp;&emsp; printf<font color="red">(<font color="blue">"Le produit de %d et %d est negatif"</font>,</font> a<font color="red">,</font> b<font color="red">);</font><br>
+									}
+								</p>
+								<h4>Résultat</h4>
+								<p>
+									<img width="350px" src="Project_img\code3.png" alt="Résultat du programme précédent" />
+								</p>
+							</p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

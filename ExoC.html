@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">Exercices C | Variables</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#" style="background-color: #9fa8da;">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main>
+				<section>
+					<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="ExoC.html" style="color: white; font-weight: bold;">Variables</a>
+							</li>
+							<li class="list-group-item">
+								<a href="Exo-condition.html">Traitement conditionnel et Boucles</a>
+							</li>
+						</ol>
+					</aside>
+					<div class="contenu">
+						<h2 style="padding-left: 20px;">1. Variables</h2>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 1-1: Saisie et Affichage</h3>
+								Saisir une variable entière, afficher sa valeur <br>
+								<button onclick="solution1()">Solution</button>
+							</div>
+							<div id="solution1" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> n <font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Saisissez en entier: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">n</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Vous avez saisi: %d"</font>, <font color="black">n</font>);</font><br>
+									}
+								</p>
+								<button onclick="code1()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 1-2: Permutation de deux variables</h3>
+								Saisir deux variables et les permuter avant de les afficher <br>
+								<button onclick="solution2()">Solution</button>
+							</div>
+							<div id="solution2" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> a <font color="red">, <font color="black">b</font>, <font color="black">tmp</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer a: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">a</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer b: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">b</font>);</font><br>
+									&emsp; tmp<font color="red">=<font color="black">a</font>;</font>
+									&emsp; a<font color="red">=<font color="black">b</font>;</font>
+									&emsp; b<font color="red">=<font color="black">temp</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"a: %d\nb: %d"</font>, <font color="black">a</font>, <font color="black">b</font>);</font><br>
+									}
+								</p>
+								<button onclick="code2()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 1-3: Floattants</h3>
+								Saisir une variables de type float, afficher sa valeur <br>
+								<button onclick="solution3()">Solution</button>
+							</div>
+							<div id="solution3" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>float</b> n <font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Saisissez un nombre: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%f"</font>, &<font color="black">n</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Vous avez saisi: %f"</font>, <font color="black">n</font>);</font><br>
+									}
+								</p>
+								<button onclick="code3()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px; padding-top: 10px;">
+								<h3 style="text-align: left;">Exercice 1-4: Moyenne arithmétique</h3>
+								Saisir trois (3) valeurs, afficher leur moyenne <br>
+								<button onclick="solution4()">Solution</button>
+							</div>
+							<div id="solution4" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>float</b> a <font color="red">, <font color="black">a</font>, <font color="black">b</font>, <font color="black">c</font>;</font><br>
+									&emsp; <b>float</b> moy <font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer trois nombre: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%f %f %f"</font>, &<font color="black">a</font>, &<font color="black">b</font>, &<font color="black">c</font>);</font><br>
+									&emsp; moy<font color="red">=(<font color="black">a</font>+<font color="black">b</font>+<font color="black">c</font>)/<font color="violet">3</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Moyenne= %.4f"</font>, <font color="black">moy</font>);</font><br>
+									}
+								</p>
+								<button onclick="code4()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 1-5: Surface du rectangle</h3>
+								Demander à l'utilisateur de saisir la longueur et la largeur d'un rectangle, afficher sa surface <br>
+								<button onclick="solution5()">Solution</button>
+							</div>
+							<div id="solution5" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>float</b> L <font color="red">, <font color="black">l</font>, <font color="black">S</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer la longueur L: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%f"</font>, &<font color="black">L</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer la largeur: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%f"</font>, &<font color="black">l</font>);</font><br>
+									&emsp; S<font color="red">=<font color="black">L</font>*<font color="black">l</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"La surface=: %f"</font>, <font color="black">S</font>);</font><br>
+									}
+								</p>
+								<button onclick="code5()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 1-6: Prise en main</h3>
+								Affecter le caractère <b>'a'</b> à une variable de type <b>char</b>, afficher ce caractère et son code ASII <br>
+								<button onclick="solution6()">Solution</button>
+							</div>
+							<div id="solution6" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>char</b> lettre <font color="red">;</font><br>
+									&emsp; lettre<font color="red">=<font color="black">'a'</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Lettre= %c\nCode ASCII: %d"</font>, <font color="black">lettre</font>, <font color="black">lettre</font>);</font><br>
+									}
+								</p>
+								<button onclick="code6()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 1-7: Successeur</h3>
+								Ecrivez un programme qui saisit un caractère et qui affiche le caractère suivant dans la table ASCII <br>
+								<button onclick="solution7()">Solution</button>
+							</div>
+							<div id="solution7" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>char</b> lettre <font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer un caractere: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%c"</font>, &<font color="black">lettre</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Le caractère qui suit %c est %c."</font>, <font color="black">lettre</font>, <font color="black">lettre+1</font>);</font><br>
+									}
+								</p>
+								<button onclick="code7()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 1-8: Casse</h3>
+								Ecrivez un programme qui saisit un caractère en minuscule et qui l'affiche en MAJUSCULE <br>
+								<button onclick="solution8()">Solution</button>
+							</div>
+							<div id="solution8" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>char</b> lettre <font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer un caractere: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%c"</font>, &<font color="black">lettre</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"La forme majuscule de %c est %c."</font>, <font color="black">lettre</font>, <font color="black">lettre-32</font>);</font><br>
+									}
+								</p>
+								<button onclick="code8()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 1-9: Permutation sans variable temporaire</h3>
+								Permuter deux variables a et b sans utiliser de variable temporaire <br>
+								<button onclick="solution9()">Solution</button>
+							</div>
+							<div id="solution9" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> a <font color="red">, <font color="black">b</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer a: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">a</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer b: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">b</font>);</font><br>
+									&emsp; a<font color="red">=<font color="black">a</font>+<font color="black">b</font>;</font><br>
+									&emsp; b<font color="red">=<font color="black">a</font>-<font color="black">b</font>;</font><br>
+									&emsp; a<font color="red">=<font color="black">a</font>-<font color="black">b</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"a: %d\nb: %d"</font>, <font color="black">a</font>, <font color="black">b</font>);</font><br>
+									}
+								</p>
+								<button onclick="code9()">Masquer la solution</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!-- ************************** Pied de pages ********************************** -->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

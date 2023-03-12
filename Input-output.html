@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="C:\Users\BUBASOFT\Desktop\EasyLearn\Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">C++ | Entrées-sorties</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="C:\Users\BUBASOFT\Desktop\EasyLearn\Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main>
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="Cpp.html">Généralités</a>
+							</li>
+							<li class="list-group-item">
+								<a href="Divergence.html">Incompatibilités entre C et C++</a>
+							</li>
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="input-output.html" style="color: white; font-weight: bold;">Entrées/Sorties Conventionnelles du C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="specificite.html">Spécificités du C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="classe.html">Classes et Objets</a>
+							</li>
+						</ol>
+					</aside>
+					<article class="contenu">
+						<h2>3. LES ENTREE - SORTIES CONVERSATIONNELLES DU C++</h2>
+						<p>
+							Le C++ hérite toutes les routines de la bibliothèques standard du C, auxquelles s'ajoutent des nouvelles posibilités d'entrées-sorties dont les caractéristiques fondamentales sont:
+							<ul>
+								<li>simplicité d'utilisation (absence de notion de format, nécessaire aux fonctions <i>printf</i> et <i>scanf);</i></li>
+								<li>réduction de la taille du module objet (contrairement à ce qui se passe avec <i>printf</i> et <i>scanf</i> introduisant un ensemble d'instruction couvrant toutes les éventualités, l'emploi des nouvelles possibilités du C++ n'introduisant que les seules intructions nécessaires à leur utilisation);</li>
+								<li> extensibilité de ces possibilités aux types classes.</li>
+							</ul>
+						</p>
+						<h3>3-1. Affichage à l'écran</h3>
+						<p>
+							Le C++ est un langage dépourvu des fonctions standard d'entrées-sorties. Cela fait de lui un langage très souple car se servant des bibliothèques pour ses entrée-sorties des fichiers et des résultats.
+						</p>
+						<h4>Exemple 1</h4>
+						<p>
+							printf("Bonjour");	/* seule forme acceptable en C */<br>
+							cout << "Bonjour";    /* seule forme acceptable en C++ */
+						</p>
+						<h4>Exemple 2</h4>
+						<p>
+							int n=25;
+							cout << "valeur: "; cout << n;    /* elles affichent: <b>valeur: 25</b> */ 
+						</p>
+						<p>
+							Les deux instructions précedentes peuvent se condencer en une seule:
+							<p>
+								cout << "valeur: " << n;    /* instruction équivalente à: <b>(cout<<"valeur: ")<< n;</b> */ 
+							</p>
+							<p>
+								De manière générale, une intruction telle que: <br>
+								<b>cout << ------- << ------- << --------< <;</b><br>
+								permet d'envoyer sur le flot <i>cout</i> différentes informations, dans l'ordre de leur apparition.
+							</p>
+						</p>
+						<h3>3-2. Possibilités d'écriture sur <i>cout</i></h3>
+						<p>
+							On peut utiliser l'opérateur <b><<</b> pour envoyer sur le flot <i>cout</i> la valeur d'une expression d'un type de base, de type chaîne ou de pointeur (pour obtenir une adresse). Pour obtenir l'adresse d'une chaine et non les caractères qu'elle contient, on convertit la chaîne (<i>char*</i>) en <i>void*</i>.
+						</p>
+						<h3>3-3. Lecture sur clavier</h3>
+						<p>
+							Comme le flot sortie <i>cout</i> associé à la sortie standard du C (<i>stdout</i>), il existe un flot d'entrés <i>cin</i>, associé à l'entrée standard (<i>stdin</i>). L'opérateur <b>>></b> permet de recevoir de l'information provenant d'un flot d'entrée.
+						</p>
+						<h4>Exemples:</h4>
+						<p>
+							cin >> n;	  /* lire des caractères sur le flot de sortie <i>cin</i> et les convertir en int (n étant de type int) */<br>
+							cin >> n >> p;   /* ou (cin cin >> n) >> p; la valeur de n est d'abord extraite du flot <i>cin</i>, pui celle de p du flot <i>cin >> n</i> (le résultat de l'opérateur >> étant un flot. */
+						</p>
+						<h3>3-4. Différentes possibilités de lecture sur <i>cin</i></h3>
+						<p>
+							Comme avec <i>scanf</i> et <i>getchar</i>, les caractères frappés sont enregistrés dans un tampon, à partir duquel se fera la lecture. Les informations du tampon non exploitées lors d'une lecture restent disponibles pour la lecture suivante. La plupart des conventions d'analyse des caractères lus sont les même que pour <i>scanf:</i>
+							<ul>
+								<li>les différentes informations sont séparées par un ou plusieurs séparateurs;</li>
+								<li>un caractère invalide arrête l'exploitation du flot, comme si l'on avait rencontré un séparateur, mais ici, ce caractère sera à nouveau pris en compte lors d'une prochaine lecture.</li>
+							</ul>
+						</p>
+						<p>
+							Contrairement à <i>scanf</i>, la lecture d'un caractère sur <i>cin</i> commence par sauter les séparateurs. Impossible aussi de ire directement ces séparateurs
+						</p>
+						<h3>3-5. Le fichier en-tête <i>iostream</i></h3>
+						<p>
+							Pour utiliser les fonctions <i>printf</i> ou <i>scanf</i>, le C incorporait le fichier en-tête <b>< stdio.h ></b> contenant des déclarations nécessaires. Quant à C++, les déclarations nécessaires figurent dans le fichier en-tête <b>< iostream.h ></b>
+						</p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

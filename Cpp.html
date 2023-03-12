@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">C++ | Généralités</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main>
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="Cpp.html" style="color: white; font-weight: bold;">Généralités</a>
+							</li>
+							<li class="list-group-item">
+								<a href="Divergence.html">Incompatibilités entre C et C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="input-output.html">Entrées/Sorties Conventionnelles du C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="specificite.html">Spécificités du C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="classe.html">Classes et Objets</a>
+							</li>
+						</ol>
+					</aside>
+					<article class="contenu">
+						<h2>1. GENERALITES CONCERNANT C++</h2>
+						<p>Le C++ a été conçu à partir de 1982 par <b>Bjarne Stroustrup</b> dans l'objectif d'ajouter au C des classes. Il s'agissait donc de greffer au C classique des possibilités de Programmation Orientée Objet(POO).</p>
+						<p>
+							Le canevas minimal à utiliser pour réaliser un programme C++ se présente ainsi :<br>
+							<b>
+								#include < iostream ><br>
+								using namespace std ;<br>
+								main() // en-tête <br>
+								{ ..... // corps du programme <br>		 
+								}
+							</b>
+							<p>
+								Toute variable utilisée dans un programme doit avoir fait l’objet d’une déclaration en précisant
+								le type et, éventuellement, la valeur initiale. Voici des exemples de déclarations : <br>
+								int i ; /* i est une variable de type int nommée i  */<br>
+								float x = 5.25 ; /* x est une variable de type float nommée x 
+								initialisée avec la valeur 5.25*/ <br>
+								const int NFOIS = 5 ; /* NFOIS est une variable de type int dont la
+								valeur, fixée à 5, ne peut plus être modifiée*/
+							</p>
+						</p>
+                        <h3>1-1. Programmation Orientée Objet</h3>
+                            <p>La programmation a toujours suscité diverses réactions. Pour certains, c'est un jeu de construction enfantin, dans lequel il suffit d'enchaîner un petit nombre d'instructions élémentaires pour résoudre un problême, pour d'autres, c'est de produire des logiciels avec des exigences de qualité basées sur des critères:</p>
+                            <p>
+                            	<b>*exactitude:</b> aptitude d'un logiciel à fournir les bons résultats, dans des conditions normales d'utilisation;<br>
+	                            <b>*robustesse:</b> aptitude à bien réagir lorsque l'on s'écarte des conditions normales d'utilisation;<br>
+	                            <b>*extensibilité:</b> facilité d'adaptation pour satisfaire à une évolution des spécifications;<br>
+	                            <b>*réutilisabilité:</b> possibilités d'utiliser certaines parties du logiciel pour résoudre un autre problème;<br>
+	                            <b>*portabilité:</b> facilité d'exploiter un même logiciel dans différentes implémentations;<br>
+	                            <b>*efficience:</b> temps d'exécution,taille,maille...
+	                        </p>
+                            <p>La contradiction est apparente et liée à l'importance des projets concernés. Il est facile d'écrire un programme exact et robuste s'il ne comporte qu'une centaine d'instructions; ilen va tout autrement s'il s'agit d'un projet de dix bonnes années. Les aspects extensibilité et réutilisabilté ont très peu d'importance dans le premier cas, alors qu'ils seront cruciaux dans le second, ne serait-ce que pour des raisons économiques.</p>
+					        <h4>Programmation structurée</h4>
+					        <p>Bien que la programmation structurée ait fait progresser la qualité de production des logiciels, ses propres fondements lui imposaient des limitations. elle reposait sur l'équation de <b>Wirth:</b> </p>
+					        <p style="text-align: center;> Algorithmes + Structures de données = Programmes</p>
+					        <p>Elle a permis de stucturer les programmes et d'en améliorer l'exactitude et la robustesse. On avait espéré qu'elle permettrait aussi d'en améliorer l'extensibilité et la réutilisabilité. Or, on s'est vite aperçu que l'adaptation ou la réutilisation d'un logiciel conduisait souvent à casser le module intéressant, parce qu'il était nécessaire de remettre en cause une structure de données. Ce type de difficultés émane directement de l'équation de Wirth, qui découpe les données des fonctions agissant sur ces données.</p>
+					       <h4>Apport de POO</h4>
+					       <p>C'est là qu'intervient <b>POO</b>, fondée sur la notion d'objet:association des données etdesprocédures agissant sur ces données.</p>
+					       <p style="text-align: center;">Méthodes + Données + Objet</p>
+					       <h4>Encapsulation</h4>
+					       <p>En <b>POO</b> pure, l'encapsulation signifie qu'il est impossible d'agir directement sur les données d'un objet sans passer par l'intermédiaire de ses méthodes. On dit que l'appel d'une méthode estl'envoi d'un message à l'objet. Ainsi, vu de l'extérieur, un objet ne se caractérise que par les spécifications de ses méthodes, la manière dont sont implantées les données étant sans importance. L'encapsulation facilite la réutilisation d'objets et la maintenance des logiciels. La modification d'une stucture des données n'ayant d'incidence que sur l'objet lui-même, ses utilisateurs ne seront plus concernés par la teneur de cette modification.</p>
+					       <h4>Concept de classe</h4>
+					       <p>Le concept de classe correpond à une généralisation de la notion de type, une classe n'étant que la description d'un ensemble d'objets ayant une même structure de données et disposant des mêmes méthodes. Les objets apparaissent alors comme des variables de type classe.</p>
+					       <h4>Héritage</h4>
+					       <p>L'héritage permet de définir une nouvelle classe à partir de celle existante, à laquelle on peut ajouter nouvelles classe, héritant propriétés et aptitudes de l'ancienne, peut ainsi s'appuyer sur des réalisations antérieures parfaitement mises au point pour une spécification. Pouvant être réitéré réutilisation des produits existants.</p>
+					       <h4>POO et langage de programmation</h4>
+					    <p>
+					    	Des langages peuvent être conçus pour appliquer les principes de POO pure (Simula, Smaltalk, Eiffel ou Java). Le C++ est obtenu en ajoutant au C les outils permettant de réaliser les principes fondamentaux de POO. Programmer en C++ va donc plus loin qu'adopter une philosophie POO en C, mais moins loin que de faire de POO pure avec Eiffel. Cette situation permet de préserver l'existant et de transiter en douceur de la programmation sturcturée vers POO sans imposer une application stricte des principes de POO.	
+					    </p>
+					    <h3>1-2. Les spécificités du C++</h3>
+					    <p>
+					    	Le C++ présente, par rapport au C ANSI, des extensions qui ne sont pas véritablement orientées POO:<br>
+					    	- nouvelle forme de commentaire (en fin de ligne); <br>	
+					    	- plus grande liberté dans l'emplacement des déclarations;<br>
+					    	- surdéfinition des fonctions; <br>
+					    	- notion de référence facilitant la mise en oeuvre de la transmission d'arguments par adresse; <br>
+					    	- nouveaux opérateurs de gestion dynamique de la mémoire: <i>new</i> et <i>delete</i>;<br>
+					    	- possibilité de définir des fonctions en ligne (<i>inline</i>).
+					    </p>
+					    <h3>1-3. Le C++ et la Programmation Orientée Objet</h3>
+					    <p>
+					    	Les possibilités de POO constituent l'essentiel de l'apport de C++, qui dispose de la classe - description d'une structure de données et de méthodes. Concernant le vocabulaire, le C++ utilise ses propres termes:<br>
+					    	<ul>
+					    		<li>
+					    			<i><b>membres données</b></i>, désignant les membres de la structure de données associée à la classe;
+					    		</li>
+					    		<li>
+					    			<i><b>fonctions membres</b></i>, désignant les méthodes.
+					    		</li>
+					    	</ul>
+					    </p>
+					    <p>
+					    	A partir d'une classe, des objets peuvent être créés soit par déclarations, ou par allocation dynamique. Le C++ permet d'encapsuler les données, mais n'en impose pas. Il permet aussi de définir un constructeur (un destructeur aussi) qui est une fonction membre particulière, exécutée au moment de la création (destruction) de l'objet. L'existence d'un contructeur garantit l'initialisation correcte de l'objet, pendant que le destructeur assure la libération de la mémoire (dynamiquement) allouée.
+					    </p>
+					    <p>
+					    	Une autre originalité du C++ par rapport aux autres langages de POO est la possibilité de définir des fonctions amies et la surdéfinition de fonctions ou surdéfinitions d'opérateurs. A l'instar du C, le C++ dispose aussi des possibilités de conversions explicites et implicites des types de base qu'il élargit, de plus, aux types classes. IL dispose des techniques d'héritage simple et multiple. IL comporte de nouvelles possibilités d'entrées-sorties avec des avantages évidents (simplicité d'utilisation, taille mémoire réduite et possibilité de les appliquer aux objets de type classes). Dans ces dernières versions, le C++ s'est doté de patrons, permettant de définir des méthodes générant différentes classes ou fonctions génériques, même si cette généricité n'est pas totalement intégrée dans le langage, comme c'est le cas avec le ADA, par exemple.
+					    </p>
+					    <p>
+					    	Enfin, la norme ANSI a accru le contenu de la bibliothèque standard de C++, qui vient compléter celle du C, toujours disponible. On y trouve de nombreux patrons de classes et de fonctions permettant d'utiliser les structures de données et les algorithmes usuels, évitant la roue à la moindre occasion.
+					    </p>
+					    <h3>1-4. Types de base</h3>
+						<p>
+							Les types de base sont ceux à partir desquels seront construits tous les autres, dits dérivés (il
+							s’agira des types structurés comme les tableaux, les structures, les unions et les classes, ou
+							d’autres types simples comme les pointeurs ou les énumérations).
+						</p>
+						<p>
+							Il existe trois types entiers : short int (ou short), int et long int (ou long). Les limitations
+							correspondantes dépendent de l’implémentation. On peut également définir des types
+							entiers non signés : unsigned short int (ou unsigned short), unsigned int et unsigned
+							long int (ou unsigned long). Ces derniers sont essentiellement destinés à la manipulation
+							de motifs binaires.
+						</p>
+						<p>
+							Les constantes entières peuvent être écrites en notation hexadécimale (comme 0xF54B) ou
+							octale (comme 014). On peut ajouter le « suffixe » u pour un entier non signé et le suffixe l
+							pour un entier de type long.
+						</p>
+						<p>
+							Il existe trois types flottants : float, double et long double. La précision et le « domaine
+							représentable » dépendent de l’implémentation.
+						</p>
+						<p>
+							Le type « caractère » permet de manipuler des caractères codés sur un octet. Le code utilisé
+							dépend de l’implémentation. Il existe trois types caractère : signed char, unsigned char et
+							char (la norme ne précise pas s’il correspond à signed char ou unsigned char). <br>
+							Les constantes de type caractère, lorsqu’elles correspondent à des « caractères imprimables »,
+							se notent en plaçant le caractère correspondant entre apostrophes. <br>
+							Certains caractères disposent d’une représentation conventionnelle utilisant le caractère « \ »
+							notamment ’\n’ qui désigne un saut de ligne. De même, ’\’’ représente le caractère ’ et ’\"’
+							désigne le caractère ". On peut également utiliser la notation hexadécimale (comme dans ’\
+							x41’) ou octale (comme dans ’\07’).
+						</p>
+						<p>
+							Le type bool permet de manipuler des « booléens ». Il dispose de deux constantes notées
+							true et false.
+						</p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

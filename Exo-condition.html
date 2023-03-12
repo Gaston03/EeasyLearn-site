@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">Exercices C | Traitement conditionnel</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#" style="background-color: #9fa8da;">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main>
+				<section>
+					<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="ExoC.html">Variables</a>
+							</li>
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="Exo-condition.html" style="color: white; font-weight: bold;">Traitement conditionnel et Boucles</a>
+							</li>
+						</ol>
+					</aside>
+					<div class="contenu">
+						<h2 style="padding-left: 20px;">2. Traitements Conditionnels</h2>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 2-1: Majorité</h3>
+								Saisir l'âge de l'utilisateur et lui dire s'il est majeur <br>
+								<button onclick="solution1()">Solution</button>
+							</div>
+							<div id="solution1" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> age <font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer votre age: "</font>);</font><br>
+									&emsp; scanf<font color="red">(<font color="blue">"%d"</font>, &<font color="black">age</font>);</font><br>
+									&emsp; <b>if</b><font color="red">(<font color="black">age</font>>=<font color="violet">18</font>)</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"Vous êtes majeur !"</font>);</font><br>
+									}
+								</p>
+								<button onclick="code1()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 2-2: Valeur absolue</h3>
+								Saisir une valeur, afficher sa valeur absolue <br>
+								<button onclick="solution2()">Solution</button>
+							</div>
+							<div id="solution2" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> n <font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer un nombre: "</font>);</font><br>
+									&emsp; scanf<font color="red">(<font color="blue">"%d"</font>, &<font color="black">n</font>);</font><br>
+									&emsp; <b>if</b><font color="red">(<font color="black">n</font><<font color="violet">0</font>)</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"| %d |=%d"</font>, <font color="black">n</font>, -<font color="black">n</font>);</font><br>
+									&emsp; <b>else if</b><font color="red">(<font color="black">n</font>==<font color="violet">0</font>)</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"| 0 |=0"</font>);</font><br>
+									&emsp; <b>else</b><font color="red">(<font color="black">n</font>><font color="violet">0</font>)</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"| %d |=%d"</font>, <font color="black">n</font>, <font color="black">n</font>);</font><br>
+									}
+								</p>
+								<button onclick="code2()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 2-3: Admission</h3>
+								Saisir une note, afficher "Récalé" si la note est inférieure à 8, "rattrapage" entre 8 et 10, "admis" dessus de 10 <br>
+								<button onclick="solution3()">Solution</button>
+							</div>
+							<div id="solution3" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>float</b> note <font color="red">;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer votre note: "</font>);</font><br>
+									&emsp; scanf<font color="red">(<font color="blue">"%f"</font>, &<font color="black">note</font>);</font><br>
+									&emsp; <b>if</b><font color="red">(<font color="black">note</font><<font color="violet">8</font>)</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"Recale"</font>);</font><br>
+									&emsp; <b>else if</b><font color="red">(<font color="black">note</font><<font color="violet">10</font>)</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"Rattrapage"</font>);</font><br>
+									&emsp; <b>else</b><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"Admis"</font>);</font><br>
+									}
+								</p>
+								<button onclick="code3()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px; padding-top: 10px;">
+								<h3 style="text-align: left;">Exercice 2-4: a<var>x</var><sup>2</sup>+b<var>x</var>+c = 0</h3>
+								Saisir les coefficients a, b et c, afficher la/les solutions de l'équation a<var>x</var><sup>2</sup>+b<var>x</var>+c = 0 <br>
+								<button onclick="solution4()">Solution</button>
+							</div>
+							<div id="solution4" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> a <font color="red">, <font color="black">b</font>, <font color="black">c</font>;</font><br>
+									&emsp; <b>float</b> r1 <font color="red">, <font color="black">r2</font>, <font color="black">d</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer a: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">a</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer b: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">b</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer c: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">c</font>);</font><br>
+									&emsp; d<font color="red">=(<font color="black">b</font>*<font color="black">b</font>)+(<font color="black">4</font>*<font color="black">a</font>*<font color="black">c</font>);</font><br>
+									&emsp; <b>if</b><font color="red">(<font color="black">d</font><<font color="violet">0</font>)</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"Pas de solution reelle."</font>);</font><br>
+									&emsp; <b>else if</b><font color="red">(<font color="black">d</font>==<font color="violet">0</font>)</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"L'equation admet une unique solution: r=%.4f"</font>, (<font color="black">float</font>)-<font color="black">b</font>/<font color="violet">2</font>*<font color="black">a</font>);</font><br>
+									&emsp; <b>else</b><br>
+									&emsp;{<br>
+									&emsp;&emsp; r1<font color="red">=(<font color="black">float</font>)(-<font color="black">b</font>-<font color="black">sqrt</font>(<font color="black">d</font>))/<font color="violet">2</font>*<font color="black">a</font>;</font><br>
+									&emsp;&emsp; r2<font color="red">=(<font color="black">float</font>)(-<font color="black">b</font>+<font color="black">sqrt</font>(<font color="black">d</font>))/<font color="violet">2</font>*<font color="black">a</font>;</font><br>
+									&emsp;&emsp; printf <font color="red">(<font color="blue">"L'equation admet deux solutions distinctes: r1=%.4f\tr2=%.4f"</font>, <font color="black">r1</font>, <font color="black">r2</font>);</font><br>
+									&emsp;}<br>
+									}
+								</p>
+								<button onclick="code4()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 2-5: Calculatrice</h3>
+								Ecrire un programme demandant à l'utilisateur de saisir: <br>
+								- deux valeur a et b de type int; <br>
+								- un opérateur <b>op</b> de type <b>char</b>, vérifiez qu'il s'agit de l'une des valeurs suivantes +, -, *, /. <br>
+								Puis afficher le résultat de l'opération a <b>op</b> b <br>
+								<button onclick="solution5()">Solution</button>
+							</div>
+							<div id="solution5" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> a <font color="red">, <font color="black">b</font>;</font><br>
+									&emsp; <b>char</b> op;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer a: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">a</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer b: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">b</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer un operateur (+ ou - ou * ou /): "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%c"</font>, &<font color="black">op</font>);</font><br>
+									&emsp; op<font color="red">=<font color="black">getchar</font>();</font><br>
+									&emsp; <b>switch</b><font color="red">(<font color="black">op</font>)</font><br>
+									&emsp; {<br>
+									&emsp;&emsp; <b>case</b> '+'<font color="red">: <font color="black">printf </font>(<font color="blue">"%d + %d = %d"</font>, <font color="black">a</font>, <font color="black">b</font>, <font color="black">a</font>+<font color="black">b</font>); <font color="black">break</font>;</font><br>
+									&emsp;&emsp; <b>case</b> '-'<font color="red">: <font color="black">printf </font>(<font color="blue">"%d - %d = %d"</font>, <font color="black">a</font>, <font color="black">b</font>, <font color="black">a</font>-<font color="black">b</font>); <font color="black">break</font>;</font><br>
+									&emsp;&emsp; <b>case</b> '*'<font color="red">: <font color="black">printf </font>(<font color="blue">"%d * %d = %d"</font>, <font color="black">a</font>, <font color="black">b</font>, <font color="black">a</font>*<font color="black">b</font>); <font color="black">break</font>;</font><br>
+									&emsp;&emsp; <b>case</b> '/'<font color="red">: <font color="black">printf </font>(<font color="blue">"%d / %d = %.4f"</font>, <font color="black">a</font>, <font color="black">b</font>, (<font color="black">float</font>)<font color="black">a</font>/<font color="black">b</font>) <font color="black">break</font>;</font><br>
+									&emsp;&emsp; <b>default</b><font color="red">: &nbsp;<font color="black">printf </font>(<font color="blue">"Mauvaise saisie"</font>); <font color="black">break</font>;</font><br>
+									&emsp; }<br>
+									}
+								</p>
+								<button onclick="code5()">Masquer la solution</button>
+							</div>
+						</div>
+						<div style="display: flex; flex-wrap: wrap;">
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 2-6: Opérations sur les heures</h3>
+								Ecrire un programme qui demande à l'utilisateur de saisir une heure de début (heures + minutes) et une heure de fin. Ce programme doit ensuite calculer en heures + minutes le temps écoulé entre l'heure de début et l'heure de fin. Si l'utilisateur saisit 10h30 et 12h45 le programme doit afficher que le temps écoulé est 1h45. On suppose que les deux heures se trouvent dans la même journée, si celle de début est supérieure à celle de fin, un message d'erreur doit s'afficher. Lors de la saisie, séparez les heures des minutes. <br>
+								<button onclick="solution6()">Solution</button>
+							</div>
+							<div id="solution6" style="padding-left: 20px; padding-right: 20px; padding-top: 10px; display: none;">
+								<img src="Project_img\Exe2-6.png" alt="Solution du 6e exercice" /> <br>
+								<button onclick="code6()">Masquer la solution</button>
+							</div>
+						</div>
+						<h2 style="padding-left: 20px;">3. Boucles</h2>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 3-1: Factorielle</h3>
+								Ecrire un programme la factorielle d'un nombre saisi par l'utilisateur (n! = 1*2*3*...*n et 0!=1) <br>
+								<button onclick="solution7()">Solution</button>
+							</div>
+							<div id="solution7" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+										&emsp; <b>int</b> i <font color="red">, <font color="black">n</font>;</font><br>
+										&emsp; <b>float</b> f <font color="red">= <font color="black">1</font>;</font><br>
+										&emsp; printf<font color="red">(<font color="blue">"------ Calcul de n! -----\n"</font>);</font><br>
+										&emsp; printf<font color="red">(<font color="blue">"Entrer n: "</font>);</font><br>
+										&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">n</font>);</font><br>
+										&emsp; <b>for</b><font color="red">(<font color="black">i</font>=<font color="violet">1</font>; <font color="black">i</font><=<font color="violet">n</font>; <font color="black"> i</font>++)</font><br>
+										&emsp;&emsp; f<font color="red">*=<font color="black">i</font>;</font><br>
+										&emsp; printf<font color="red">(<font color="blue">"%d!=%.0f"</font>, <font color="black">n</font>, <font color="black">f</font>);</font><br>
+									}
+								</p>
+								<button onclick="code7()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 3-2: Table de multiplication</h3>
+								Ecrire un programme affichant la table de multiplication d'un nombre saisi par l'utilisateur <br>
+								<button onclick="solution8()">Solution</button>
+							</div>
+							<div id="solution8" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+										&emsp; <b>int</b> i <font color="red">, <font color="black">n</font>;</font><br>
+										&emsp; printf<font color="red">(<font color="blue">"Entrer n: "</font>);</font><br>
+										&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">n</font>);</font><br>
+										&emsp; <b>for</b><font color="red">(<font color="black">i</font>=<font color="violet">0</font>; <font color="black">i</font><=<font color="violet">10</font>; <font color="black"> i</font>++)</font><br>
+										&emsp;&emsp; printf<font color="red">(<font color="blue">"%d * %d=%d\n"</font>, <font color="black">n</font>, <font color="black">i</font>, <font color="black">n</font>*<font color="black">i</font>);</font><br>
+									}
+								</p>
+								<button onclick="code8()">Masquer la solution</button>
+							</div>
+						</div>
+						<div>
+							<div style="padding-left: 20px; padding-right: 20px;">
+								<h3 style="text-align: left;">Exercice 3-3: Puissance</h3>
+								Ecrire un programme demandant à l'utilisateur de saisir deux valeurs b et n (vérifier que n est positif) et affichant la valeur b<sup>n</sup> <br>
+								<button onclick="solution9()">Solution</button>
+							</div>
+							<div id="solution9" style="padding-left: 20px; padding-right: 20px; display: none;">
+								<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+									<span style="color: green">#include < stdio.h ></span> <br>
+									main<font color="red">()</font><br>
+									{<br>
+									&emsp; <b>int</b> b <font color="red">, <font color="black">n</font>, <font color="black">i</font>;</font><br>
+									&emsp; <b>float</b> p <font color="red">=<font color="black">1</font>;</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer b: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">b</font>);</font><br>
+									&emsp; printf <font color="red">(<font color="blue">"Entrer n: "</font>);</font><br>
+									&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">n</font>);</font><br>
+									&emsp; <b>while</b><font color="red">(<font color="black">n</font><<font color="violet">0</font>)</font><br>
+									&emsp; {<br>
+									&emsp;&emsp; printf<font color="red">(<font color="blue">"n doit etre positif!!!\n"</font>);</font><br>
+									&emsp;&emsp; printf<font color="red">(<font color="blue">"Entrer n: "</font>);</font><br>
+									&emsp;&emsp; scanf <font color="red">(<font color="blue">"%d"</font>, &<font color="black">n</font>);</font><br>
+									&emsp; }<br>
+									&emsp; <b>for</b><font color="red">(<font color="black">i</font>=<font color="violet">1</font>; <font color="black">i</font><=<font color="violet">n</font>; <font color="black"> i</font>++)</font><br>
+									&emsp;&emsp; p<font color="red">*=<font color="black">n</font>;</font><br>
+									&emsp; printf<font color="red">(<font color="blue">"%d^%d=%.0f"</font>, <font color="black">b</font>, <font color="black">n</font>, <font color="black">p</font>);</font><br>
+									}
+								</p>
+								<button onclick="code9()">Masquer la solution</button>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!-- ************************** Pied de pages ********************************** -->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

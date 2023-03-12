@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="HTML & CSS-EasyLearn">Les balises</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main>
+				<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="web.html">Introduction</a>
+							</li>
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="balise.html" style="color: white; font-weight: bold;">Notions de balise</a>
+							</li>
+						</ol>
+					</aside>
+				<section class="contenu">
+					<h2>1. Définition</h2>
+					<div>
+						Les pages HTML sont remplies de ce qu'on appelle des <b>balises</b>. Celles-ci sont invisibles à l'écran pour vos visiteurs, mais elles permettent à l'ordinateur de comprendre ce qu'il doit faire. <br>
+						Les balises se repèrent facilement. Elles sont entourés de <b><< chevrons >></b>, c'est-à-dire des symboles < et >, comme ceci: <b>< balise ></b><br>
+						Les balises indiquent la nature du texte qu'elles encadrent. Elles veulent dire par exemple: ceci est le titre de la page, ceci est une image, ceci est un paragraphe, etc. <br>
+					</div>
+					<h2>2. Types de balises</h2>
+					<div>
+						On distingue deux types de balises: les balises en paires et les balises orphelines.
+						<div>
+							<h3>Les balises en paires</h3>
+							<p>
+								Elles s'ouvrent, contiennent du texte, et se ferment plus loin. Voici à quoi elles ressemblent:
+								<center>
+									<p style="background-color: lightgray; width: 60%; text-align: center;" contenteditable="true">
+										<font color="blue">< title ></font> ceci est un titre <font color="blue">< /title ></font>
+									</p>
+								</center>
+							</p>
+							<p>
+								On distingue une balise ouvrante (<font color="blue">< title ></font>) et une balise fermante (<font color="blue">< /title ></font>) qui indique que le titre se termine. Cela signifie pour l'ordinateur que tout ce qui n'est pas entre ces deux balises n'est pas un titre.
+							</p>
+						</div>
+						<div>
+							<h3>Les balises orphelines</h3>
+							<p>
+								Ce sont des balises qui servent le plus souvent à insérer un élément à un endroit précis (par exempls une image). Il n'est pas nécessaire de délimiter le début et la fin de l'image, on veut juste dire à l'ordinateur <b>Insère une image ici</b>.<br>
+								Une balise orpheline s'écrit comme suit:
+								<center>
+									<p style="background-color: lightgray; width: 60%; text-align: center;" contenteditable="true">
+										<font color="blue">< img/ ></font>
+									</p>
+								</center>
+							</p>
+							<p>
+								On distingue une balise ouvrante (<font color="blue">< title ></font>) et une balise fermante (<font color="blue">< /title ></font>) qui indique que le titre se termine. Cela signifie pour l'ordinateur que tout ce qui n'est pas entre ces deux balises n'est pas un titre.
+							</p>
+						</div>
+					</div>
+					<h2>3. Les attributs</h2>
+					<div>
+						Les attributs sont un peu les options des balises. Ils viennent les compléter pour doner des informations supplémentaires. L'attribut se place après le nom de la balise ouvrante et a le plus souvent une valeur, comme ceci:<br>
+						<center>
+							<p style="background-color: lightgray; width: 60%; text-align: center;" contenteditable="true">
+								<font color="blue">< balise <font color="red">attribut=</font><font color="green">"valeur"</font> ></font>
+							</p>
+						</center>
+						<p>
+							A quoi cela sert-il? Prenons la balise <font color="blue">< img /></font> que nous venons de voir. Seule, elle ne sert pas à grand chose. On pourrait rajouter un attribut qui indique le nom de l'image à afficher:
+							<center>
+								<p style="background-color: lightgray; width: 60%; text-align: center;" contenteditable="true">
+									<font color="blue">< img <font color="red">src=</font><font color="green">"gaston.jpg"</font> /></font>
+								</p>
+							</center>
+							L'ordinateur comprend alors qu'il doit afficher l'image contenu dans le fichier <i><b>gaston.jpg</b></i><br>
+						</p>
+						<p>
+							Dans le cas d'une balise fonctionnant <b>par paire</b>on ne met les attributs que dans la balise ouvrante et pas dans la balise fermante. Par exemple, ce code indique que la ciation est Neil Armstrong et qu'elle date du 21 juillet 1969.
+								<p style="background-color: lightgray; width: 60%;" contenteditable="true">
+									<font color="blue">< citation <font color="red">auteur=</font><font color="green">"Neil Armstrong"</font> <font color="red">date=</font><font color="green">"21/07/1969"</font>></font><br>
+									&emsp;Ceci est un petit pas pour l'homme, mais un bond de géant pour l'humanité.<br>
+									<font color="blue">< /citation ></font>
+								</p>
+						</p>
+					</div>
+					<h2>3. Structure d'une page HTML</h2>
+					<div>
+						<p style="background-color: lightgray; width: 60%;" contenteditable="true">
+							< !DOCTYPE html ><br>
+							<font color="blue">< html ></font><br>
+							&emsp;<font color="blue">< head ></font><br>
+							&emsp;&emsp;<font color="blue">< meta <font color="red">charset=</font><font color="green">"utf-8"</font> /></font><br>
+							&emsp;&emsp;<font color="blue">< title ></font>Titre<font color="blue">< /title ></font><br>
+							&emsp;<font color="blue">< /head ></font><br>
+							&emsp;<font color="blue">< body ></font><br><br>
+							&emsp;<font color="blue">< /body ></font><br>
+							<font color="blue">< /html ></font>
+						</p>
+						<p>
+							Vous noterez que balises s'ouvrent et se ferment dans un ordre précis. Par exemple, la balise <font color="blue">< html ></font> est la première et c'est aussi la dernière que l'on ferme (tout à la fin du code, avec <font color="blue">< html ></font>). <i>Les balises doivent être fermées dans le sens inverse de leur ouverture.</i>
+						</p>
+						<div>
+							<h3>Le doctype</h3>
+							<center>
+								<p style="background-color: lightgray; width: 60%;" contenteditable="true">
+									< !DOCTYPE html >
+								</p>
+							</center>
+							<p>
+								La toute première ligne s'appelle le <b>doctype</b>. Elle est indispensable car c'est elle qui indique qu'il s'agit bien d'une page web HTML. <br>
+								Ce n'est pas vraiment une balise comme les autres (elle commence par un point d'exclammation), vous pouvez considérer que c'est un peu l'exception qui confirme la rèle.
+							</p>
+						</div>
+						<div>
+							<h3>La balise html</h3>
+							<center>
+								<p style="background-color: lightgray; width: 60%;" contenteditable="true">
+									<font color="blue">< html ></font>&emsp;<font color="blue">< /html ></font>
+								</p>
+							</center>
+							<p>
+								C'est la balise principale d code. Elle englobe tout le contenu de votre page. Comme vous pouvez le voir, la balise fermante <font color="blue">< /html ></font> se trouve à la fin du code ! 
+							</p>
+						</div>
+						<div>
+							<h3>L'en-tête <font color="blue">< head ></font> et le corps <font color="blue">< body ></font> </h3>
+							Une page web est constituée de deux parties:
+							<ul>
+								<li>
+									L'en-tête <font color="blue">< head ></font>: cette section donne quelques informations générales sur la page comme son titre, l'encodage (pour la gestion des caractères spéciaux), etc. Cette section est généralement assez courte. Les informations que contient l'en-tête ne sont pas affichées sur la page, ce sont simplement des informations générales à destination de l'ordianteur. Elles sont cependant très importantes !
+								</li>
+								<li>
+									Le corps <font color="blue">< body ></font>: c'est là que se trouve la partie principale de la page. Tout ce que nous écririons ici sera affiché à l'écran. C'est à l'intérieur du corps que nous écririons la majeure partie de notre code.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div>
+						<h3>L'endocage (charset)</h3>
+						<center>
+							<p style="background-color: lightgray; width: 60%;" contenteditable="true">
+								<font color="blue">< meta <font color="red">charset=</font><font color="green">"utf-8"</font> /></font>
+							</p>
+						</center>
+						<p>
+							Cette balise indique l'encodage utilisé dans votre fichier .html. <br>
+							L'encodage indique la façon dont le fichier est enregistré. C'est lui qui détermine comment les caractères spéciaux vons s'afficher (accents, idéogrammes chinois et japonais, caractères arabes, etc.).
+						</p>
+						<p>
+							Il y a plusieurs techniques d'encodage portant des noms bizarres et utilisés en fontions des langues: ISO-8859-1, OEM 775, Windows-1253... Une seule cependant devrait être utlilisée aujourd'hui autant que possible: <b>UTF-8</b>. Cette méthode d'encodage permet d'afficher sans aucun problème pratiquement tous les symboles de toutes les langues de notre planète!
+						</p>
+					</div>
+					<div>
+						<h3>Le titre principal de la page</h3>
+						<center>
+							<p style="background-color: lightgray; width: 60%;" contenteditable="true">
+								<font color="blue">< title ></font>&emsp;<font color="blue">< /title ></font>
+							</p>
+						</center>
+						<p>
+							C'est le titre de votre page, probablement l'élément le plus important ! Toute page doit avoir un titre qui décrit ce qu'elle contient. Il est conseillé de garder le titre assez court (moins de 100 caractères en général).
+						</p>
+						<p>
+							Le titre ne s'affiche pas dans votre page mais en haut de celle-ci (souvent dans l'onglet du navigateur). Il faut savoir que le titre apparait aussi dans les résultats de recherche, comme sur Google.
+						</p>
+					</div>
+					<div>
+						<h3>Les commentaires</h3>
+						<p>
+							Un commentaire est une balise HTML avec une forme bien spéciale:
+						</p>
+						<center>
+							<center>
+								<p style="width: 320px;">
+									<img src="Project_img\comment.png"/>
+								</p>
+							</center>
+						</center>
+						<p>
+							Le titre ne s'affiche pas dans votre page mais en haut de celle-ci (souvent dans l'onglet du navigateur). Il faut savoir que le titre apparait aussi dans les résultats de recherche, comme sur Google.
+						</p>
+					</div>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

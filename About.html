@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="EasyLearn">EasyLearn-Plateforme e-learning</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page"  background="Project_img\image1.jpg">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..." />
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..." />
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<!------- Corps de la page -------->
+			<main>
+				<!-- <div class="flexbox"> -->
+					<h1>Qui sommes Nous?</h1>
+					<div id="acteur" class="flexbox">
+						<div class="profil">
+							<div>
+								<img src="Project_img\gaston.png" alt="Profil Gaston" class="profil-image">
+							</div>
+							<p>
+								TONGUINO Gaston Pascal<br>Etudiant en Ingeniérie des Systèmes Informatiques <br>Licence 1
+							</p>
+						</div>
+						<div class="profil">
+							<div>
+								<img src="Project_img\celestine.jpg" alt="Profil Célestine" class="profil-image">
+							</div>
+							<p>
+								LENO Célestine<br>Etudiant en Ingeniérie des Systèmes Informatiques <br>Licence 1
+							</p>
+						</div>
+					</div>
+					<div class="propos">
+						<p>
+							<span class="letter">E</span>asyLearn est né de deux étudiants <b>TONGUINO Gaston Pascal</b> & <b>TOLNO Célestine</b> suite à un projet qui leur a été confié par leur professeur d'Algorithmique et de Programmation, Madame <b>Khamar ZEKHNINI</b>.
+						</p>
+						<p>
+							EasyLearn propose des cours et des exercices en ligne faciles à comprendre pour les débutants. Notre contenu et nos ressources sont disponibles gratuitement et nous préférons les conserver de manière à encourager nos lecteurs à acquérir autant de compétences qu'ils le souhaitent. Nous leur simplifions l'apprentissage!
+						</p>
+						<p>
+							<h3>Notre mission:</h3>
+							<ul>
+								<li>Innover et apporter une meilleure expérience d'apprentissage à tous nos étudiants</li>
+							</ul>
+						</p>
+					</div>
+				<!-- </div> -->
+			</main>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

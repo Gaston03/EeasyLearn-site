@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">C++ | Divergeance</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main>
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="Cpp.html">Généralités</a>
+							</li>
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="Divergence.html" style="color: white; font-weight: bold;">Incompatibilités entre C et C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="input-output.html">Entrées/Sorties Conventionnelles du C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="specificite.html">Spécificités du C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="classe.html">Classes et Objets</a>
+							</li>
+						</ol>
+					</aside>
+					<article class="contenu">
+						<h2>2. INCOMPATIBILITES DU C ET C++</h2>
+						<p>
+							Le C++ étant une extension du C, tout programme C devrait se traduire correctement par le C++ et l'exécution fournir les mêmes résultats. Si cet objectif est effectivement atteint en pratique, quelques incompatibilités avec le C stantard ont tout de même subsisté, inhérentes à l'esprit de conception des deux langages.
+						</p>
+						<h3>2-1. Définitions des fonctions en C++</h3>
+						<p>
+							Soit à définir une fonction <i>fexple</i>, fournissant une valeur de retour de type <i>double</i> et recevant deux arguments, l'un de type <i>int</i>, l'autre de type <i>double</i>. Pour cela on peut, en C, procéder de l'une de deux manières:
+						</p>
+						<div class="flex-formation">
+							<div class="result">
+								<h4>1<sup>ère</sup> manière</h4>
+								<p>
+									<img width="350px" src="Project_img\code.png" alt="Définition d'une fonction en C: 1ère manière" />
+								</p>
+							</div>
+							<div class="result">
+								<h4>2<sup>ème</sup> manière</h4>
+								<p style="padding-top: 20px;">
+									<img width="350px" src="Project_img\code.png" alt="Définition d'une fonction en C: 2ème manière" />
+								</p>
+							</div>
+						</div>
+						<p>
+							La première forme étant la seule prévue par la définition initiale de Kernighan et Ritchie, la seconde a été introduite par le C ANSI qui n'a pas exclu l'ancienne. Le C++ n'accepten quant à lui, que la seconde forme.
+						</p>
+						<h3>2-2. Prototypes en C++</h3>
+						<p>
+							En C, pour utiliser une fonctionl n'ayant pas été définie dans le même fichier source, on pouvait:
+						</p>
+						<ul>
+							<li>ne pas la déclarer (on considérait alors que sa valeur de retour était de type int);</li>
+							<li>la déclarer en ne précisant que le type de la valeur de retour (par exemple, double, fexple);</li>
+							<li>la déclarer à l'aide de son prototype (par exemple, double fexple(int, double).</li>
+						</ul>
+						En C++, un appel de fonctin n'est accepté que si le compilateur connaît le type de paramètres et de valeur de retour. Elle doit avoir été déclaréd ou préablement définie dans le fichier source. A chaque appel, les types de paramètres effectifs et formels sont comparés. En cas de différence, les conversions nécessaires sont mises en place pour que la fonction reçoive des arguments du bon type.
+						<center>
+							<h4>Exemple</h4>
+							<p>
+								<img src="Project_img\code.png" alt="Exemple d'appel à une fonction" />
+							</p>
+						</center>
+						<p>
+							Si la définition et la déclaration de fonction sont dans un même fichier source, le compilateur peut vérifier la conhérence entre en-tête et prototype. L'absence de correspondance exacte de types (entre prototype et en-tête) déclenche une erreur.
+						</p>
+						<div class="flex-formation">
+							<div class="result">
+								<h4>Exemple correcte</h4>
+								<p>
+									<img width="350px" src="Project_img\code.png" alt="Forme correcte de la déclaration" />
+								</p>
+							</div>
+							<div class="result">
+								<h4>Exemple incorrecte</h4>
+								<p style="padding-top: 20px;">
+									<img width="350px" src="Project_img\code.png" alt="Forme incorrecte de la déclaration" />
+								</p>
+							</div>
+						</div>
+						<p>
+							Si la définition et la déclaration d'une fonction ne figurent pas dans le même fichier source, le contrôle n'est plus possible. Pour utiliser une telle fonction, il faut placer son prototype dans un fichier en-tête incorporé.
+						</p>
+						<h3>2-3. Arguments et valeur de retour</h3>
+						<p>
+							En ce qui concerne les points communs entre le C et le C++, arguments et valeur de retour peuvent, soit ne pas exister, soit être une valeur scalaire de type quelconque. Il est à noter qu'il subsiste une disparité entre tableaux et structures puisque:
+						</p>
+						<ul>
+							<li>il est possible de transmettre la valeur d'une structure, aussi bien en arguments qu'en valeur de retour;</li>
+							<li>il n'est pas possible de faire de même avec les tableaux.</li>
+						</ul>
+						<p>
+							Concernant les différences ces deux langages, elles ne portent que sur la syntaxe d'en-têtes et de prototypes des fonctions, et uniquement dans les deux cas de fonctions sans argument et/ou sans valeurs de retour.
+						</p>
+						<h3>2-3-1. Fonctions sans arguments</h3>
+						<p>
+							Alors qu'en C on peut employer le mot <i><b>void</b></i> pour définir (en-tête) ou déclarer (prototype) une fonction sans arguments, en C++, on fournit une liste vide. Exemple:
+							- float fct(void);    /* version du C*/<br>
+							- float fct();    	  /* version du C++ */
+						</p>
+						<h3>2-3-2. Fonctions sans valeur de retour</h3>
+						<p>
+							Si en C, on peut utliliser le mot <b><i>void</i></b> pour définir ou déclarer une fonction sans valeur de retour, en C++, on doit absolument le faire comme dans cet exemple:
+							- void fct(int, double);		/* valable en C/C++ */<br>
+							- fct (int, double);			/* le C++ interprète comme int fct(int, double); */
+						</p>
+						<h3>2-4. Le qualificatif <i>const</i></h3>
+						<p>
+							Le C standard a introduit le qualificatif <i>const</i>, précisant qu'un symbole correspond à quelque chose dont la valeur ne change pas, et au compilateur de signaler toute tentative de modification. Si cela reste vra, en C++, quelques différences apparaissent concernant la portée et l'utilisation du symbole dans une expression.
+						</p>
+						<h3>2-4-1. Portée de <i>const</i></h3>
+						<p>
+							Pour <i>const</i> s'appliquant à des variables <b>automatiques</b>, pas de différence entre C et C++. Par contre, si <i>const</i> s'applique à une valeur <b>globale</b> (<b>statique</b>), le C++ limite la portée de <b>const</b> au fichier source contenant la déclaration (comme s'il avait reçu l'attribut <b>static</b>), pendant que le C n'imposait aucune limitation.
+						</p>
+						<center>
+							<h3>2-4-2. Utilisation du <i>const</i> dans une expression</h3>
+							<p>
+								La valeur d'une expression constante étant calculée à la compilation, avec:<br>
+								<img src="Project_img\code.png" alt="Utilisaton du const" />
+							</p>
+						</center>
+						<p>
+							l'expression:<br>
+							2 * p * 5 <br>
+							n'est pas une constante en C alors qu'elle en est une en C++. Ceci est surtout sensible aux déclarations de tableaux dont les dimensions sont obligatoirement constantes. Ainsi, les instructios:<br>
+							<b>
+								cont int nel = 15;<br>
+								..............<br>
+								double t1[nel + l<sub>j</sub>], t2[2 * nel][nel];
+							</b><br>
+							seront acceptées en C++, alors qu'elles étaient refusées en C.
+						</p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

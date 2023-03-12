@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">Langage C | Types de variable</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main class="page-content">
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="C.html">Introduction</a>
+							</li>
+							<li class="list-group-item">
+								<a href="variable.html">Variables</a>
+							</li>
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="typevar.html" style="color: white; font-weight: bold;">Types de variable</a>
+							</li>
+							<li class="list-group-item">
+								<a href="conditions.html">if() et if()...else</a>
+							</li>
+							<li class="list-group-item">
+								<a href="switch.html">switch()</a>
+							</li>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="boucles.html">Boucle</a>
+							</li>
+							<li class="list-group-item">
+								<a href="table.html">Tableaux</a>
+							</li>
+							<li class="list-group-item">
+								<a href="string.html">Chaînes de caractères</a>
+							</li>
+							<li class="list-group-item">
+								<a href="fonctions.html">Fonctions</a>
+							</li class="list-group-item">
+							<li class="list-group-item">
+								<a href="structures.html">Structure</a>
+							</li>
+						</ol>
+						<div style="padding-top: 20px; padding-right: 20px;">
+							<h2>Cours Vidéo</h2>
+							<video src="Projet_vid\LANGAGE C - 10 - Les types Float et Double.mp4" controls width="330px"></video>
+							<h3>Variables de type <b>float/double</b></h3>
+							<video src="Projet_vid\LANGAGE C - 11 - Le type char.mp4" controls width="330px"></video>
+							<h3>Variables de type <b>char</b></h3>
+						</div>
+					</aside>
+					<article class="contenu">
+						<div id="type">
+							<h2>3. Types de variable</h2>
+							<p>
+								<h3>Entiers</h3>
+								<p>
+									Trois types de base servent à représenter les entiers:
+								</p>
+								<p>
+									<center>
+										<table border>
+											<tr>
+												<td>Nom</td>
+												<td>Taille</td>
+												<td>Nombre de valeurs</td>
+												<td>Chaîne de format</td>
+											</tr>
+											<tr>
+												<td>
+													short<br>
+													int<br>
+													long<br>
+												</td>
+												<td>
+													1 octet <br>
+													2 octets <br>
+													4 octets <br>
+												</td>
+												<td>
+													2<sup>8</sup> valeurs <br>
+													2<sup>16</sup> valeurs <br>
+													2<sup>32</sup> valeurs <br>
+												</td>
+												<td>
+													%hd <br>
+													%d <br>
+													%ld <br>
+												</td>
+											</tr>
+										</table>
+									</center>
+								</p>
+								<h4>Entiers non signés</h4>
+								<p>
+									Par défaut, les entiers permettent de stocker des valeurs de signe quelconque. Si on préfixe un type entier par <b>unsigned</b>, on le restreint à des valeurs uniquement positives. Dans ce cas on a:
+								</p>
+								<p>
+									<center>
+										<table border>
+											<tr>
+												<td>Nom</td>
+												<td>Taille</td>
+												<td>Valeur min</td>
+												<td>Valeur max</td>
+												<td>Chaîne de format</td>
+											</tr>
+											<tr>
+												<td>
+													unsigned short<br>
+													unsigned int<br>
+													unsigned long<br>
+												</td>
+												<td>
+													1 octet <br>
+													2 octets <br>
+													4 octets <br>
+												</td>
+												<td>
+													0<br>
+													0<br>
+													0<br>
+												</td>
+												<td>
+													2<sup>8</sup> - 1<br>
+													2<sup>16</sup> - 1<br>
+													2<sup>32</sup> - 1<br>
+												</td>
+												<td>
+													%hu <br>
+													%u <br>
+													%lu <br>
+												</td>
+											</tr>
+										</table>
+									</center>
+								</p>
+								<h>Entiers signés</h4>
+								<p>
+									Si par contre les données sont signés, on a comme plage de valeurs:
+								</p>
+								<p>
+									<center>
+										<table border>
+											<tr>
+												<td>Nom</td>
+												<td>Taille</td>
+												<td>Valeur min</td>
+												<td>Valeur max</td>
+												<td>Chaîne de format</td>
+											</tr>
+											<tr>
+												<td>
+													unsigned short<br>
+													unsigned int<br>
+													unsigned long<br>
+												</td>
+												<td>
+													1 octet <br>
+													2 octets <br>
+													4 octets <br>
+												</td>
+												<td>
+													-2<sup>7</sup><br>
+													-2<sup>15</sup><br>
+													-2<sup>31</sup><br>
+												</td>
+												<td>
+													2<sup>7</sup> - 1<br>
+													2<sup>15</sup> - 1<br>
+													2<sup>31</sup> - 1<br>
+												</td>
+												<td>
+													%hd <br>
+													%d <br>
+													%ld <br>
+												</td>
+											</tr>
+										</table>
+									</center>
+								</p>
+								<h3>Flottants</h3>
+								<p>
+									Les flottants servent à représenter les réels. Leur nom vient du fait qu'on les représente de façon scientifique comme étant un nombre décimal (à virgule) muni d'un exposant (un décalage de la virgule). Trois types de base servent à représenter les floattans.
+								</p>
+								<p>
+									<center>
+										<table border>
+											<tr>
+												<td>Nom</td>
+												<td>Taille</td>
+												<td>Chaîne de format</td>
+											</tr>
+											<tr>
+												<td>
+													float<br>
+													double<br>
+													long double<br>
+												</td>
+												<td>
+													4 octet <br>
+													8 octets <br>
+													10 octets <br>
+												</td>
+												<td>
+													%f <br>
+													%lf <br>
+													%lf <br>
+												</td>
+											</tr>
+										</table>
+									</center>
+								</p>
+								<h3>Caractères</h3>
+								<p>
+									Un <b>char</b> sert à représenter le code ASCII d'un caractère, il est donc codé sur 1o. Il est possible d'affecter à une telle variable toute valeur du code ASCII entourée pas de simples quotes <b>" "</b>. Par exemple, l'affectation suivante place dans la variable a (de type char) le code ASCII du caractère 'B'.<br>
+									<center>
+										<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+										&emsp; <b>char</b> a <font color="red">;</font><br>
+											&emsp; a<font color="red">=</font>'B'<font color="red">;</font>
+										</p>
+									</center>
+								</p>
+								<p>
+									Pour afficher le caractère qui correspond au code ASCII stocké dans un char, on utilise la chaîne de format <b>%c</b>, et pour afficher le code ASCII lui-même on utilise la chaîne de format <b>%d</b>. 
+								</p>
+								<h4>Constantes</h4>
+								<p>
+									Une constante est une valeur portant un nom, contrairement aux variables, elles ne sont ps modifiables.<br>
+									Les constantes en C sont non typées, on les définit dans l'entête de la source, juste en dessous des <b>#include</b>.<br>
+									La syntaxe est:
+									<center>
+										<p style="background-color: whitesmoke; width: 100%" contenteditable="true">
+											&emsp; <span style="color: green">#define </span> NOM_CONST valeur_const<br>
+										</p>
+									</center>
+									Par exemple <b>#define N 5</b> définit une constant N qui a la valeur 5. Au début de la compilations, un programme appelé préprocesseur effectue un "rechercher/remplacer" et substitue à toutes les occurenses de la constantes N la valeur 65.
+								</p>
+							</p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>

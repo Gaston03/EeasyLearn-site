@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="Project_img\site-logo-mini.png"/>
+		<link rel="stylesheet" type="text/css" href="styleprojet.css"/>
+		<script src="https://kit.fontawesome.com/632fd32ac8.js" crossorigin="anonymous"></script>
+		<title title="Langage C-EasyLearn">C++ | Spécificité</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<div id="page">
+			<!-------- Entête de la Page -------->
+			<header style="background-color: white;">
+				<div>
+					<a href="Index.html">
+						<img src="Project_img\site-logo.png" alt="Logo du site" class="logo"/>
+					</a>
+				</div>
+				<nav role="navigation" id="navigation">
+					<span id="close-menu" class="close" onclick="closemenu()">
+						<i class="fas fa-times"></i>
+					</span>
+					<span id="show-menu" class="menu" onclick="showmenu()">
+						<i class="fas fa-bars"></i>
+					</span>
+					<span class="search">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button>
+							<i class="fas fa-search"></i>
+						</button>
+					</span>
+					<ul class="left-nav">
+						<li>
+							<a href="Index.html">
+								<i class="fas fa-home"></i>
+							</a>
+						</li>
+						<li><a href="#" onclick="show_sub_menu1()" style="background-color: #9fa8da;">
+								<i class="fas fa-graduation-cap"></i> Formations <i class="fas fa-caret-down" id="hide-icon1"></i>
+							</a>
+							<ul id="sous-menu1" style="display: none;">
+								<li>
+									<a href="C.html">Langage C</a>
+								</li>
+								<li>
+									<a href="Cpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="Web.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon1" onclick="close_sub_menu1()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+						<li onclick="show_sub_menu2()"><a href="#">
+								<i class="fas fa-question-circle"></i> Exercices <i class="fas fa-caret-down" id="hide-icon2"></i>
+							</a>
+							<ul id="sous-menu2" style="display: none;">	
+								<li>
+									<a href="ExoC.html">Langage C</a>
+								</li>
+								<li>
+									<a href="ExoCpp.html">Langage C++</a>			
+								</li>
+								<li>
+									<a href="ExoWeb.html">HTML & CSS</a>					
+								</li>
+							</ul>
+						</li>
+						<span id="show-icon2" onclick="close_sub_menu2()" style="display: none; color: white; cursor: pointer; font-size: 25px;">&times;</span>
+					</ul>
+					<ul id="hidden" class="right-nav">
+						<li>
+							<a href="Connexion.html">
+								<i class="fas fa-lock"></i> Connexion
+							</a>
+						</li>
+						<li>
+							<a href="Inscription.html">
+								<i class="fas fa-sign-in-alt"></i> Inscription
+							</a>
+						</li>
+						<li>
+							<span style="color: white; cursor: pointer;" onclick="showbar()">
+								<a href="#">
+									<i class="fas fa-search"></i>
+								</a>
+							</span>
+						</li>
+					</ul>
+					<span id="mySearch" class="search1">
+						<input type="search" placeholder="Saisissez ce que vous cherchez..."/>
+						<button onclick="hide_search()">
+							<i class="fas fa-times"></i>
+						</button>
+					</span>
+				</nav>
+				<ul id="menu-deroulant">
+					<li>
+						<a href="Index.html">
+							<i class="fas fa-home"></i> Accueil
+						</a>
+					</li>
+					<li><a href="#">
+							<i class="fas fa-graduation-cap"></i> Formations
+						</a>
+						<ul>
+							<li>
+								<a href="C.html">Langage C</a>
+							</li>
+							<li>
+								<a href="Cpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="Web.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li><a href="#"><i class="fas fa-question-circle"></i> Exercices</a>
+						<ul>	
+							<li>
+								<a href="ExoC.html">Langage C</a>
+							</li>
+							<li>
+								<a href="ExoCpp.html">Langage C++</a>			
+							</li>
+							<li>
+								<a href="ExoWeb.html">HTML & CSS</a>					
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="Connexion.html">
+							<i class="fas fa-lock"></i> Connexion
+						</a>
+					</li>
+					<li>
+						<a href="Inscription.html">
+							<i class="fas fa-sign-in-alt"></i> Inscription
+						</a>
+					</li>
+				</ul>
+			</header>
+			<!------- Fin de l'entête --------->
+			<main>
+				<section>
+					<aside class="sommaire">
+						<h2 style="text-transform: uppercase; text-align: center;">Sommaire</h2>
+						<ol class="list-groupe">
+							<li class="list-group-item">
+								<a href="Cpp.html">Généralités</a>
+							</li>
+							<li class="list-group-item">
+								<a href="Divergence.html">Incompatibilités entre C et C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="input-output.html">Entrées/Sorties Conventionnelles du C++</a>
+							</li>
+							<li class="list-group-item" style="background-color: darkblue;">
+								<a href="specificite.html" style="color: white; font-weight: bold;">Spécificités du C++</a>
+							</li>
+							<li class="list-group-item">
+								<a href="classe.html">Classes et Objets</a>
+							</li>
+						</ol>
+					</aside>
+					<article class="contenu">
+						<h2>4. LES SPECIFICITES DU C++</h2>
+						<p>
+							L'objectif de ce chapitre est d'apprendre aux étudiants les spécificités donc dispose le C++, qui ne sont, pourtant, pas axées sur la programmation orientée objet. Il s'agit essentiellement des suivantes:
+						</p>
+						<h3>4-1. Commentaire de fin de ligne</h3>
+						<p>
+							En plus des commentaires du C standard, le C++ dispose d'une nouvelle forme de commentaires appelés commentaire de fon de ligne <b>(//)</b>. Tout ce qui est situé entre // et la fin de ligne est un commentaire.
+						</p>
+						<h3>4-2. Notion de références</h3>
+						<p>
+							En plus des pointeurs, le C++ permet de créer des références (synonymes d'identificateurs), permettant de manipuler une variable sous un nom autre que celui sous lequel elle a été déclarée. Toute référence doit se référer à un identificateur. Il est donc impossible de déclarer une référence sans l'initialier. De plus, la déclaration d'une référence ne crée pas un nouvel objet. Les références se rapportent à des identificateurs déjà existants. La syntaxe de déclaration d'une référence est la suivante:<br>
+							<p><b>type & refVar = referencedVariable;</b></p>
+							Après cette déclaration, <i>refVar</i> peut être utilisé partour où <i>referencedVariable</i> peut l'être. Ce sont des synonymes. Voir l'exemple suivant:
+							<p>
+								<b>
+									int i=2;<br>
+									int & ri=i;  //référence sur la variable i <br>
+									ri = ri + i;  //double la valeur de i (et de ri)
+								</b>
+							</p>
+						</p>
+						<h3>4-2-1. Initialisation de référence</h3>
+						<p>
+							Examinons les instructions suivantes:
+							<p>
+								<b>
+									int & ri = i;   //déclaration de référence suivie d'une initialisation <br>
+									int & ri;  //incorrect, il est impossible de déclarer une référence sans l'initialiser <br>
+									int & ri = i;   //une fois déclarée (initialisée), la référence ne peut être modifiée. Si, après déclaration, on écrit:<br>
+									i = j;   //il s'agit d'affecter j à l'emplacement référencé par i, et non de la modification de la référence i. <br>
+									int & ri = 3;   //incorrecte; on ne peut initialiser une référence avec une constante.
+								</b>
+							</p>
+							Cependant, on peut définir des références constantes initialisées ensuite par des constantes, comme dans:<br>
+							<b>const int é ri=3;</b> /* correcte: crée une variable temporaire contenant la valeur 3 et place sa référence dans ri */.
+							<p>
+								Cette déclaration serait équivalente aux deux suivantes:
+								<p>
+									<b>
+										int tem=3;<br>
+										const int & ri = temp;
+									</b>
+								</p>
+								Enfin, les déclarations suivantes sont encore correctes:
+								<p>
+									<b>
+										float x;<br>
+										int temp = x; <br>
+										const int & ri = temp;
+									</b>
+								</p>
+							</p>
+						</p>
+					</article>
+				</section>
+				<div class="scroll-div">
+					<a href="#" class="scroll-btn">
+						<i class="fas fa-angle-up"></i>
+					</a> 
+				</div>
+			</main>
+			<!--------------------- Pied de la page ------------------------->
+			<footer>
+				<div class="footer-div">
+					<h2>Cours</h2>
+					<ul>
+						<li>
+							<a href="C.html">Langage C</a>
+						</li>
+						<li>
+							<a href="Cpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="Web.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Exercices</h2>
+					<ul>
+						<li>
+							<a href="ExoC.html">Langage C</a>
+						</li>
+						<li>
+							<a href="ExoCpp.html">Langage C++</a>
+						</li>
+						<li>
+							<a href="ExoWeb.html">HTML & CSS</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>A Propos</h2>
+					<ul>
+						<li>
+							<a href="About.html">
+								<i class="fas fa-users"></i> Qui sommes-nous ?
+							</a>
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, Riyad Zaitoune
+						</li>
+						<li>
+							<i class="fas fa-map-marker-alt"></i> 50050 Meknès, El Mansour
+						</li>
+					</ul>
+				</div>
+				<div class="footer-div">
+					<h2>Contact</h2>
+					<ul>
+						<li><i class="fas fa-envelope"></i>
+							<a href="mailto: easylearn@gmail.com">easylearn@gmail.com</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 658-795696">+212 658-795696</a>
+						</li>
+						<li>
+							<i class="fas fa-phone-alt"></i><a href="tel: +212 618-526893">+212 618-526893</a>
+						</li>
+						<li style="word-spacing: 15px; padding-top: 10px;">
+							<a href="#">
+								<i class="fab fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-linkedin"></i>
+							</a>
+							<a href="#">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<p>
+					<a href="Index.html">EasyLearn</a>&copy;2022, tous droits réservés.
+				</p>
+			</footer>
+		</div>
+		<script src="projet.js"></script>
+	</body>
+<html>
